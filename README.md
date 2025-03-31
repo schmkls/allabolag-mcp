@@ -1,18 +1,24 @@
 # allabolag-mcp
 
+General MCP reading: https://modelcontextprotocol.io/introduction
+
+This project was created using `bun init` in bun v1.2.5. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+
+## Get Started
+
 To install dependencies:
 
 ```bash
 bun install
 ```
 
-To run:
+To run with inspector:
 
 ```bash
-bun run index.ts
+bun inspector
 ```
 
-This project was created using `bun init` in bun v1.2.5. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Then go to `http://localhost:5173`
 
 ## To Use
 
