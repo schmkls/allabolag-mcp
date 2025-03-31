@@ -23,8 +23,11 @@ Add a file called `.cursor/mcp.json` to create a local copy of this mcp or `~/.c
 ```json
 {
   "mcpServers": {
-    "alla-bolag-server": {
-      "url": "http://localhost:3000/sse"
+    "allabolag": {
+      "command": "node",
+      "args": [
+        "/Users/alvinjohansson/code/personal/allabolag-mcp/dist/index.js"
+      ]
     }
   }
 }
