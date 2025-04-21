@@ -2,7 +2,7 @@
   "mcpServers": {
     "allabolag": {
       "command": "node",
-      "args": ["/Users/alvinjohansson/code/personal/allabolag-mcp/dist/index.js"]
+      "args": ["/Users/martinmickels/code/personal/allabolag-mcp/dist/index.js"]
     }
   }
 }
