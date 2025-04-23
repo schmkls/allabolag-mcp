@@ -21,18 +21,26 @@ server.tool(
       logger.log("Calling searchCompanies function...");
       const results = await searchCompanies(query);
       logger.log("Search results received:", results);
-      
+
       if (results.length === 0) {
         logger.log("No results found");
         return {
-          content: [{ type: "text", text: "No companies found matching your search criteria." }],
+          content: [
+            {
+              type: "text",
+              text: "No companies found matching your search criteria.",
+            },
+          ],
         };
       }
 
       logger.log(`Found ${results.length} companies`);
-      const formattedResults = results.map(company => (
-        `${company.name} (${company.orgNumber})\nLocation: ${company.location}\nLink: https://www.allabolag.se${company.link}\n`
-      )).join("\n");
+      const formattedResults = results
+        .map(
+          (company) =>
+            `${company.name} (${company.orgNumber})\nLocation: ${company.location}\nLink: https://www.allabolag.se${company.link}\n`
+        )
+        .join("\n");
 
       return {
         content: [{ type: "text", text: formattedResults }],
@@ -44,18 +52,24 @@ server.tool(
         isError: true,
       };
     }
-  },
+  }
 );
 
 server.tool(
   "get-company-info",
   "Get detailed company information using the company's page link from search results",
-  { link: z.string().describe("The link path from search results (e.g. /foretag/company-name/...)") },
+  {
+    link: z
+      .string()
+      .describe(
+        "The link path from search results (e.g. /foretag/company-name/...)"
+      ),
+  },
   async ({ link }) => {
     logger.log("using tool get-company-info");
     try {
       const info = await getCompanyInfo(link);
-      
+
       const formattedInfo = [
         `Company Name: ${info.name}`,
         `Organization Number: ${info.orgNumber}`,
@@ -64,7 +78,9 @@ server.tool(
         info.revenue ? `Revenue: ${info.revenue}` : null,
         info.employees ? `Employees: ${info.employees}` : null,
         info.phone ? `Phone: ${info.phone}` : null,
-        info.industry?.length ? `Industries: ${info.industry.join(", ")}` : null,
+        info.industry?.length
+          ? `Industries: ${info.industry.join(", ")}`
+          : null,
         info.description ? `\nDescription: ${info.description}` : null,
       ]
         .filter(Boolean)
@@ -79,7 +95,7 @@ server.tool(
         isError: true,
       };
     }
-  },
+  }
 );
 
 logger.log("Server started");
