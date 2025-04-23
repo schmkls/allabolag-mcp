@@ -31,9 +31,7 @@ Add a file called `.cursor/mcp.json` to create a local copy of this mcp or `~/.c
   "mcpServers": {
     "allabolag": {
       "command": "node",
-      "args": [
-        "/Users/alvinjohansson/code/personal/allabolag-mcp/dist/index.js"
-      ]
+      "args": ["/Users/wihu/full/path/to/allabolag-mcp/dist/index.js"]
     }
   }
 }
