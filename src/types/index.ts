@@ -35,13 +35,13 @@ export interface SegmentationSearchResult {
   orgNumber: string;
   location: string;
   link: string;
-  revenue?: string;
+  revenue?: number;
   revenueYear?: string;
-  employees?: string;
-  profit?: string;
+  employees?: number;
+  profit?: number;
   profitYear?: string;
   industry?: string[];
-  registrationDate?: string;
+  registrationDate?: Date;
 }
 
 export interface SegmentationSearchResponse {

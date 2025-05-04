@@ -7,6 +7,25 @@ import {
 } from "../types/index.js";
 
 /**
+ * Parses a string value into a number
+ */
+function parseNumericValue(value?: string): number | undefined {
+  if (!value) return undefined;
+  const cleanValue = value.replace(/\s+/g, "");
+  const parsedValue = parseInt(cleanValue);
+  return isNaN(parsedValue) ? undefined : parsedValue;
+}
+
+/**
+ * Parses a string into a Date object
+ */
+function parseDateValue(value?: string): Date | undefined {
+  if (!value) return undefined;
+  const date = new Date(value);
+  return isNaN(date.getTime()) ? undefined : date;
+}
+
+/**
  * Search for companies on Allabolag.se using segmentation criteria
  *
  * @param params - The search parameters for segmentation (location, employees, revenue, etc.)
@@ -140,7 +159,7 @@ export async function segmentationSearch(
       });
 
     // Find revenue information
-    let revenue: string | undefined;
+    let revenueStr: string | undefined;
     let revenueYear: string | undefined;
     $(companyEl)
       .nextAll()
@@ -150,7 +169,7 @@ export async function segmentationSearch(
         if (text.includes("Omsättning")) {
           const parts = text.split("Omsättning");
           if (parts.length > 1) {
-            revenue = parts[1].trim();
+            revenueStr = parts[1].trim();
             if (text.includes("20")) {
               revenueYear = text.match(/\d{4}/)?.[0];
             }
@@ -160,7 +179,7 @@ export async function segmentationSearch(
       });
 
     // Find employees information
-    let employees: string | undefined;
+    let employeesStr: string | undefined;
     $(companyEl)
       .nextAll()
       .slice(0, 10)
@@ -169,14 +188,14 @@ export async function segmentationSearch(
         if (text.includes("Anställda")) {
           const parts = text.split("Anställda");
           if (parts.length > 1) {
-            employees = parts[1].trim();
+            employeesStr = parts[1].trim();
           }
           return false;
         }
       });
 
     // Find profit information
-    let profit: string | undefined;
+    let profitStr: string | undefined;
     let profitYear: string | undefined;
     $(companyEl)
       .nextAll()
@@ -186,7 +205,7 @@ export async function segmentationSearch(
         if (text.includes("Resultat")) {
           const parts = text.split("Resultat");
           if (parts.length > 1) {
-            profit = parts[1].trim();
+            profitStr = parts[1].trim();
             if (text.includes("20")) {
               profitYear = text.match(/\d{4}/)?.[0];
             }
@@ -196,7 +215,7 @@ export async function segmentationSearch(
       });
 
     // Find registration date
-    let registrationDate: string | undefined;
+    let registrationDateStr: string | undefined;
     $(companyEl)
       .nextAll()
       .slice(0, 10)
@@ -205,7 +224,7 @@ export async function segmentationSearch(
         if (text.includes("Registrerad")) {
           const parts = text.split("Registrerad");
           if (parts.length > 1) {
-            registrationDate = parts[1].trim();
+            registrationDateStr = parts[1].trim();
           }
           return false;
         }
@@ -226,6 +245,12 @@ export async function segmentationSearch(
           industry.push(industryText);
         }
       });
+
+    // Parse the string values into appropriate types
+    const revenue = parseNumericValue(revenueStr);
+    const employees = parseNumericValue(employeesStr);
+    const profit = parseNumericValue(profitStr);
+    const registrationDate = parseDateValue(registrationDateStr);
 
     results.push({
       name,
@@ -269,13 +294,13 @@ function createSampleResults(
       link: `/foretag/test-company-${i + 1}/stockholm/-/${556000 + i}${
         1000 + i
       }`,
-      revenue: `${100000 - i * 10000}`,
+      revenue: 100000 - i * 10000,
       revenueYear: "2023",
-      employees: `${50 - i}`,
-      profit: `${10000 - i * 1000}`,
+      employees: 50 - i,
+      profit: 10000 - i * 1000,
       profitYear: "2023",
       industry: ["Test Industry"],
-      registrationDate: createSampleDate(i, params),
+      registrationDate: new Date(createSampleDate(i, params)),
     };
 
     results.push(result);
@@ -283,23 +308,16 @@ function createSampleResults(
 
   // Sort results based on params
   if (params.sort === "revenueDesc") {
-    results.sort(
-      (a, b) =>
-        parseInt((b.revenue || "0").replace(/\s+/g, "")) -
-        parseInt((a.revenue || "0").replace(/\s+/g, ""))
-    );
+    results.sort((a, b) => (b.revenue || 0) - (a.revenue || 0));
   } else if (params.sort === "registrationDateDesc") {
     results.sort((a, b) => {
-      const dateA = new Date(a.registrationDate || "");
-      const dateB = new Date(b.registrationDate || "");
+      const dateA = a.registrationDate;
+      const dateB = b.registrationDate;
+      if (!dateA || !dateB) return 0;
       return dateB.getTime() - dateA.getTime();
     });
   } else if (params.sort === "profitDesc") {
-    results.sort(
-      (a, b) =>
-        parseInt((b.profit || "0").replace(/\s+/g, "")) -
-        parseInt((a.profit || "0").replace(/\s+/g, ""))
-    );
+    results.sort((a, b) => (b.profit || 0) - (a.profit || 0));
   }
 
   return results;
@@ -326,6 +344,24 @@ function createSampleDate(
  * Maps a company object from the JSON data to our SegmentationSearchResult type
  */
 function mapJsonToCompanyResult(company: any): SegmentationSearchResult {
+  // Parse numeric and date values
+  const revenue =
+    typeof company.revenue === "number"
+      ? company.revenue
+      : parseNumericValue(company.revenue);
+
+  const employees =
+    typeof company.numberOfEmployees === "number"
+      ? company.numberOfEmployees
+      : parseNumericValue(company.numberOfEmployees);
+
+  const profit =
+    typeof company.profit === "number"
+      ? company.profit
+      : parseNumericValue(company.profit);
+
+  const registrationDate = parseDateValue(company.foundationDate);
+
   const result: SegmentationSearchResult = {
     name: company.name || "",
     orgNumber: company.organisationNumber || "",
@@ -338,12 +374,12 @@ function mapJsonToCompanyResult(company: any): SegmentationSearchResult {
     )}/${encodeURIComponent(
       company.location?.municipality?.toLowerCase() || ""
     )}/`,
-    revenue: company.revenue,
+    revenue,
     revenueYear: company.companyAccountsLastUpdatedDate,
-    employees: company.numberOfEmployees,
-    profit: company.profit,
+    employees,
+    profit,
     profitYear: company.companyAccountsLastUpdatedDate,
-    registrationDate: company.foundationDate,
+    registrationDate,
   };
 
   // Add industry data if available

@@ -154,7 +154,7 @@ server.tool(
       results.forEach((company, index) => {
         response += `${index + 1}. ${company.name}\n`;
         if (company.revenue && company.revenueYear) {
-          response += `   Revenue: ${company.revenue} thousand SEK (${company.revenueYear})\n`;
+          response += `   Revenue: ${company.revenue} SEK (${company.revenueYear})\n`;
         }
         if (company.employees) {
           response += `   Employees: ${company.employees}\n`;

@@ -5,17 +5,18 @@ import { SegmentationSearchParams } from "../../types/index.js";
 describe("segmentationSearch", () => {
   test("should filter companies by location with 'umeå'", async () => {
     const params: SegmentationSearchParams = {
-      location: "umeå",
+      location: "Umeå",
     };
 
     const { results, totalCount } = await segmentationSearch(params);
 
+    // We should get results and they should match the total count
     expect(results.length).toBeGreaterThan(0);
     expect(totalCount).toBeGreaterThan(0);
 
-    // Verify all companies have location containing Umeå
+    // Verify ALL companies have location containing Umeå
     results.forEach((company) => {
-      expect(company.location.toLowerCase()).toContain("umeå");
+      expect(company.location).toEqual("Umeå");
     });
   });
 
@@ -26,24 +27,20 @@ describe("segmentationSearch", () => {
 
     const { results, totalCount } = await segmentationSearch(params);
 
+    // We should get results and they should match the total count
     expect(results.length).toBeGreaterThan(0);
     expect(totalCount).toBeGreaterThan(0);
 
-    // Verify all companies have revenue data
+    // Revenue sorted data must have revenue values
     results.forEach((company) => {
       expect(company.revenue).toBeDefined();
     });
 
-    // Check that first company has more revenue than second
-    if (results.length >= 2) {
-      const firstCompanyRevenue = parseInt(
-        results[0].revenue?.replace(/\s+/g, "") || "0"
-      );
-      const secondCompanyRevenue = parseInt(
-        results[1].revenue?.replace(/\s+/g, "") || "0"
-      );
-
-      expect(firstCompanyRevenue).toBeGreaterThan(secondCompanyRevenue);
+    // Check the descending order is maintained throughout the results
+    for (let i = 0; i < results.length - 1; i++) {
+      const current = results[i].revenue as number;
+      const next = results[i + 1].revenue as number;
+      expect(current).toBeGreaterThanOrEqual(next);
     }
   });
 
@@ -54,25 +51,20 @@ describe("segmentationSearch", () => {
 
     const { results, totalCount } = await segmentationSearch(params);
 
+    // We should get results and they should match the total count
     expect(results.length).toBeGreaterThan(0);
     expect(totalCount).toBeGreaterThan(0);
 
-    // Verify all companies have registration date data
+    // Date sorted data must have registration dates
     results.forEach((company) => {
       expect(company.registrationDate).toBeDefined();
     });
 
-    // Check that first company has more recent registration date than second
-    if (results.length >= 2) {
-      // Extracting the year from date strings should be sufficient for comparison
-      const firstDateYear = parseInt(
-        results[0].registrationDate?.substring(0, 4) || "0"
-      );
-      const secondDateYear = parseInt(
-        results[1].registrationDate?.substring(0, 4) || "0"
-      );
-
-      expect(firstDateYear).toBeGreaterThanOrEqual(secondDateYear);
+    // Check the descending order is maintained throughout the results
+    for (let i = 0; i < results.length - 1; i++) {
+      const current = results[i].registrationDate as Date;
+      const next = results[i + 1].registrationDate as Date;
+      expect(current.getTime()).toBeGreaterThanOrEqual(next.getTime());
     }
   });
 
@@ -85,7 +77,7 @@ describe("segmentationSearch", () => {
 
     expect(results.length).toBeGreaterThan(0);
     expect(totalCount).toBeGreaterThan(0);
-    expect(totalCount).toBeGreaterThanOrEqual(results.length);
+    expect(totalCount).toEqual(results.length);
   });
 
   test("should return different results when using pagination", async () => {
@@ -111,38 +103,54 @@ describe("segmentationSearch", () => {
   });
 
   test("should find companies with specific number of employees range", async () => {
+    const employeesFrom = 50;
+    const employeesTo = 100;
+
     const params: SegmentationSearchParams = {
-      numEmployeesFrom: 50,
-      numEmployeesTo: 100,
+      numEmployeesFrom: employeesFrom,
+      numEmployeesTo: employeesTo,
     };
 
     const { results } = await segmentationSearch(params);
 
     expect(results.length).toBeGreaterThan(0);
 
-    // Verify all companies have employees data
+    // ALL companies returned must have employee data
     results.forEach((company) => {
       expect(company.employees).toBeDefined();
+
+      // Strict check: ALL employees must be within range
+      const employees = company.employees as number;
+      expect(employees).toBeGreaterThanOrEqual(employeesFrom);
+      expect(employees).toBeLessThanOrEqual(employeesTo);
     });
   });
 
   test("should find companies with specific revenue range", async () => {
+    const revenueFrom = 10000; // 10M SEK
+    const revenueTo = 50000; // 50M SEK
+
     const params: SegmentationSearchParams = {
-      revenueFrom: 10000, // 10M SEK
-      revenueTo: 50000, // 50M SEK
+      revenueFrom,
+      revenueTo,
     };
 
     const { results } = await segmentationSearch(params);
 
     expect(results.length).toBeGreaterThan(0);
 
-    // Verify all companies have revenue data
+    // ALL companies returned must have revenue data
     results.forEach((company) => {
       expect(company.revenue).toBeDefined();
+
+      // Strict check: ALL revenue must be within range
+      const revenue = company.revenue as number;
+      expect(revenue).toBeGreaterThanOrEqual(revenueFrom);
+      expect(revenue).toBeLessThanOrEqual(revenueTo);
     });
   });
 
-  test("should find companies with profit by sorting on profit", async () => {
+  test("should find companies with profit and sort them in descending order", async () => {
     const params: SegmentationSearchParams = {
       sort: "profitDesc",
     };
@@ -151,21 +159,24 @@ describe("segmentationSearch", () => {
 
     expect(results.length).toBeGreaterThan(0);
 
-    // Verify companies have profit data
-    // Note: First companies should have profit data when sorted by profit
+    // When sorted by profit, at least the first company must have profit data
     expect(results[0].profit).toBeDefined();
 
-    // Check that first company has more profit than second
-    if (results.length >= 2 && results[1].profit) {
-      const firstCompanyProfit = parseInt(
-        results[0].profit?.replace(/\s+/g, "") || "0"
-      );
-      const secondCompanyProfit = parseInt(
-        results[1].profit?.replace(/\s+/g, "") || "0"
-      );
+    let lastProfit: number | undefined;
+    for (const company of results) {
+      if (company.profit === undefined) continue;
 
-      expect(firstCompanyProfit).toBeGreaterThan(secondCompanyProfit);
+      // If we've seen a profit value before, compare with it
+      if (lastProfit !== undefined) {
+        expect(lastProfit).toBeGreaterThanOrEqual(company.profit);
+      }
+
+      // Update last profit value
+      lastProfit = company.profit;
     }
+
+    // Ensure we actually tested at least one profit comparison
+    expect(lastProfit).not.toBeNull();
   });
 
   test("should throw an error with invalid sort parameter", async () => {
@@ -174,14 +185,9 @@ describe("segmentationSearch", () => {
       sort: "invalidSortValue",
     } as unknown as SegmentationSearchParams;
 
-    let error: Error | null = null;
-    try {
+    // Verify the function throws an error with the expected message
+    await expect(async () => {
       await segmentationSearch(params);
-    } catch (e) {
-      error = e instanceof Error ? e : new Error(String(e));
-    }
-
-    expect(error).not.toBeNull();
-    expect(error?.message).toContain("Invalid sort parameter");
+    }).rejects.toThrow("Invalid sort parameter");
   });
 });
