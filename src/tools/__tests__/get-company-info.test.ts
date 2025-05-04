@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { getCompanyInfo } from "../src/scraper.js";
+import { getCompanyInfo } from "../get-company-info.js";
 
 describe("getCompanyInfo", () => {
   test("should fetch and parse Fortnox company information correctly", async () => {

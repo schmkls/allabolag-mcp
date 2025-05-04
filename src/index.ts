@@ -4,7 +4,6 @@ import { z } from "zod";
 import { logger } from "./logger.js";
 import { searchCompanies } from "./tools/search-companies.js";
 import { getCompanyInfo } from "./tools/get-company-info.js";
-import type { CompanySearchResult } from "./types/index.js";
 
 const server = new McpServer({
   name: "allabolag",

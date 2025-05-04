@@ -1,0 +1,2826 @@
+[
+  {
+    "industryName": "Adressregister",
+    "proffIndustryCode": "10000872"
+  },
+  {
+    "industryName": "Advokatbyråer",
+    "proffIndustryCode": "10000882"
+  },
+  {
+    "industryName": "Affärsinformation",
+    "proffIndustryCode": "10000898"
+  },
+  {
+    "industryName": "Affärssystem",
+    "proffIndustryCode": "10000911"
+  },
+  {
+    "industryName": "Agenturer",
+    "proffIndustryCode": "10000924"
+  },
+  {
+    "industryName": "Agenturhandel-övrig",
+    "proffIndustryCode": "10241783"
+  },
+  {
+    "industryName": "Aluminium, produkter",
+    "proffIndustryCode": "10000937"
+  },
+  {
+    "industryName": "Ambassader, konsulat och handelskontor i Sverige",
+    "proffIndustryCode": "10000958"
+  },
+  {
+    "industryName": "Andra affärsmässiga tjänster",
+    "proffIndustryCode": "10241784"
+  },
+  {
+    "industryName": "Annan utrustning - reparation",
+    "proffIndustryCode": "10241785"
+  },
+  {
+    "industryName": "Antenner, paraboler",
+    "proffIndustryCode": "10000959"
+  },
+  {
+    "industryName": "Antikviteter",
+    "proffIndustryCode": "10241786"
+  },
+  {
+    "industryName": "Apoteksvaror, läkemedel - Distribution",
+    "proffIndustryCode": "10000973"
+  },
+  {
+    "industryName": "Apoteksvaror, läkemedel - Partihandel",
+    "proffIndustryCode": "10241787"
+  },
+  {
+    "industryName": "Arbetskraftstjänster",
+    "proffIndustryCode": "10241788"
+  },
+  {
+    "industryName": "Arbetsmarknadsmyndigheter och näringslivsmyndigheter, bransch",
+    "proffIndustryCode": "10001006"
+  },
+  {
+    "industryName": "Arbetstagarorganisationer",
+    "proffIndustryCode": "10241789"
+  },
+  {
+    "industryName": "Arkitekter",
+    "proffIndustryCode": "10000625"
+  },
+  {
+    "industryName": "Artister, nöjen",
+    "proffIndustryCode": "10000641"
+  },
+  {
+    "industryName": "Asfalt, asfaltarbeten",
+    "proffIndustryCode": "10000654"
+  },
+  {
+    "industryName": "Auktioner",
+    "proffIndustryCode": "10241790"
+  },
+  {
+    "industryName": "Automater",
+    "proffIndustryCode": "10000666"
+  },
+  {
+    "industryName": "Avfall - grossister",
+    "proffIndustryCode": "10241791"
+  },
+  {
+    "industryName": "Avfallshantering",
+    "proffIndustryCode": "10241876"
+  },
+  {
+    "industryName": "Badrumsinredningar, badrumsrenoveringar",
+    "proffIndustryCode": "10000692"
+  },
+  {
+    "industryName": "Bagerier - Brödindustri",
+    "proffIndustryCode": "10000705"
+  },
+  {
+    "industryName": "Balkonger",
+    "proffIndustryCode": "10000718"
+  },
+  {
+    "industryName": "Banker",
+    "proffIndustryCode": "10000731"
+  },
+  {
+    "industryName": "Batterier",
+    "proffIndustryCode": "10000757"
+  },
+  {
+    "industryName": "Batterier - produktion",
+    "proffIndustryCode": "10241792"
+  },
+  {
+    "industryName": "Begravningsbyråer och krematorier",
+    "proffIndustryCode": "10241793"
+  },
+  {
+    "industryName": "Behållare, kärl",
+    "proffIndustryCode": "10000778"
+  },
+  {
+    "industryName": "Belysningsarmatur",
+    "proffIndustryCode": "10000791"
+  },
+  {
+    "industryName": "Belysningsarmatur - Komponenter",
+    "proffIndustryCode": "10000804"
+  },
+  {
+    "industryName": "Bemanningsföretag",
+    "proffIndustryCode": "10000817"
+  },
+  {
+    "industryName": "Bensinstationer",
+    "proffIndustryCode": "10241794"
+  },
+  {
+    "industryName": "Besiktning, provning",
+    "proffIndustryCode": "10000838"
+  },
+  {
+    "industryName": "Beslag",
+    "proffIndustryCode": "10000859"
+  },
+  {
+    "industryName": "Beslutsstödssystem",
+    "proffIndustryCode": "10001176"
+  },
+  {
+    "industryName": "Betong, betongvaror",
+    "proffIndustryCode": "10001189"
+  },
+  {
+    "industryName": "Betong, betongvaror - produktion",
+    "proffIndustryCode": "10241795"
+  },
+  {
+    "industryName": "Betonghåltagning",
+    "proffIndustryCode": "10001202"
+  },
+  {
+    "industryName": "Bevakningsföretag",
+    "proffIndustryCode": "10001215"
+  },
+  {
+    "industryName": "Bevattningsutrustningar",
+    "proffIndustryCode": "10239364"
+  },
+  {
+    "industryName": "Bibliotek- och arkivverksamhet",
+    "proffIndustryCode": "10241796"
+  },
+  {
+    "industryName": "Bijouteri",
+    "proffIndustryCode": "10241797"
+  },
+  {
+    "industryName": "Bijouteri - tillverkning",
+    "proffIndustryCode": "10241553"
+  },
+  {
+    "industryName": "Bilar",
+    "proffIndustryCode": "10001228"
+  },
+  {
+    "industryName": "Bilar - tillverkning",
+    "proffIndustryCode": "10241554"
+  },
+  {
+    "industryName": "Billackering, bilplåtarbeten",
+    "proffIndustryCode": "10001294"
+  },
+  {
+    "industryName": "Bilreparationer",
+    "proffIndustryCode": "10001314"
+  },
+  {
+    "industryName": "Bilreservdelar",
+    "proffIndustryCode": "10001335"
+  },
+  {
+    "industryName": "Bilskrot",
+    "proffIndustryCode": "10001349"
+  },
+  {
+    "industryName": "Biltillbehör",
+    "proffIndustryCode": "10001362"
+  },
+  {
+    "industryName": "Biluthyrning, bussuthyrning",
+    "proffIndustryCode": "10001377"
+  },
+  {
+    "industryName": "Bilvård",
+    "proffIndustryCode": "10001390"
+  },
+  {
+    "industryName": "Bioenergi",
+    "proffIndustryCode": "10001405"
+  },
+  {
+    "industryName": "Biografer",
+    "proffIndustryCode": "10241555"
+  },
+  {
+    "industryName": "Bioteknik",
+    "proffIndustryCode": "10001418"
+  },
+  {
+    "industryName": "Blästring",
+    "proffIndustryCode": "10001443"
+  },
+  {
+    "industryName": "Bokbinderier",
+    "proffIndustryCode": "10001456"
+  },
+  {
+    "industryName": "Bokförlag",
+    "proffIndustryCode": "10001469"
+  },
+  {
+    "industryName": "Bokhandlare",
+    "proffIndustryCode": "10242082"
+  },
+  {
+    "industryName": "Borrningsarbeten",
+    "proffIndustryCode": "10001491"
+  },
+  {
+    "industryName": "Borstar, penslar",
+    "proffIndustryCode": "10001504"
+  },
+  {
+    "industryName": "Borstar, penslar - tillverkning",
+    "proffIndustryCode": "10241659"
+  },
+  {
+    "industryName": "Boskap",
+    "proffIndustryCode": "10241660"
+  },
+  {
+    "industryName": "Bostadsrättsförening",
+    "proffIndustryCode": "10241763"
+  },
+  {
+    "industryName": "Bostäder",
+    "proffIndustryCode": "10241764"
+  },
+  {
+    "industryName": "Botaniska och zoologiska trädgårdar",
+    "proffIndustryCode": "10241765"
+  },
+  {
+    "industryName": "Brandredskap, brandskydd",
+    "proffIndustryCode": "10001517"
+  },
+  {
+    "industryName": "Branschorganisationer, näringslivsorganisationer",
+    "proffIndustryCode": "10001530"
+  },
+  {
+    "industryName": "Bredband",
+    "proffIndustryCode": "10001543"
+  },
+  {
+    "industryName": "Bryggeriprodukter",
+    "proffIndustryCode": "10001576"
+  },
+  {
+    "industryName": "Bryggor",
+    "proffIndustryCode": "10001589"
+  },
+  {
+    "industryName": "Brytning och gruvdrift",
+    "proffIndustryCode": "10241766"
+  },
+  {
+    "industryName": "Brytning och gruvdrift - tjänster",
+    "proffIndustryCode": "10241767"
+  },
+  {
+    "industryName": "Bränsle - grossist och detaljist",
+    "proffIndustryCode": "10241768"
+  },
+  {
+    "industryName": "Budservice",
+    "proffIndustryCode": "10001602"
+  },
+  {
+    "industryName": "Bulkgodshantering",
+    "proffIndustryCode": "10001615"
+  },
+  {
+    "industryName": "Busstrafik, biltrafik",
+    "proffIndustryCode": "10001628"
+  },
+  {
+    "industryName": "Butikshandel",
+    "proffIndustryCode": "10241769"
+  },
+  {
+    "industryName": "Butikshandel -övrigt",
+    "proffIndustryCode": "10241770"
+  },
+  {
+    "industryName": "Butiksinredningar, butiksutrustningar",
+    "proffIndustryCode": "10001641"
+  },
+  {
+    "industryName": "Butiksmaskiner, butiksutrustningar",
+    "proffIndustryCode": "10001669"
+  },
+  {
+    "industryName": "Byggentreprenader-Infrastruktur",
+    "proffIndustryCode": "10001682"
+  },
+  {
+    "industryName": "Byggmaskiner, arbetsmaskiner",
+    "proffIndustryCode": "10001695"
+  },
+  {
+    "industryName": "Byggmaterial",
+    "proffIndustryCode": "10001708"
+  },
+  {
+    "industryName": "Byggmaterial - grossist",
+    "proffIndustryCode": "10241771"
+  },
+  {
+    "industryName": "Byggmästare",
+    "proffIndustryCode": "10001729"
+  },
+  {
+    "industryName": "Byggnadsglas",
+    "proffIndustryCode": "10001750"
+  },
+  {
+    "industryName": "Bärgning, transporter",
+    "proffIndustryCode": "10001823"
+  },
+  {
+    "industryName": "Båtar, båtmotorer",
+    "proffIndustryCode": "10001763"
+  },
+  {
+    "industryName": "Båttillbehör, båtutrustningar",
+    "proffIndustryCode": "10001776"
+  },
+  {
+    "industryName": "Båttrafik",
+    "proffIndustryCode": "10001797"
+  },
+  {
+    "industryName": "Båtvarv, båtbyggare",
+    "proffIndustryCode": "10001810"
+  },
+  {
+    "industryName": "Böcker, papper, tidningar och reklamblad",
+    "proffIndustryCode": "10241772"
+  },
+  {
+    "industryName": "CAD/CAM-system",
+    "proffIndustryCode": "10001853"
+  },
+  {
+    "industryName": "CallCenters, teleservice",
+    "proffIndustryCode": "10001866"
+  },
+  {
+    "industryName": "Catering",
+    "proffIndustryCode": "10001879"
+  },
+  {
+    "industryName": "Certifiering",
+    "proffIndustryCode": "10001905"
+  },
+  {
+    "industryName": "Containrar",
+    "proffIndustryCode": "10001918"
+  },
+  {
+    "industryName": "Cyklar",
+    "proffIndustryCode": "10001931"
+  },
+  {
+    "industryName": "Dagbarnvård",
+    "proffIndustryCode": "10241773"
+  },
+  {
+    "industryName": "Daghem - arrangemang",
+    "proffIndustryCode": "10241774"
+  },
+  {
+    "industryName": "Data - Programvaror",
+    "proffIndustryCode": "10001965"
+  },
+  {
+    "industryName": "Data- och TV-spel",
+    "proffIndustryCode": "10001979"
+  },
+  {
+    "industryName": "Data/IT-konsulter . Branschspecialister",
+    "proffIndustryCode": "10002017"
+  },
+  {
+    "industryName": "Databaser, arkiv, bibliotek",
+    "proffIndustryCode": "10001991"
+  },
+  {
+    "industryName": "Datacenters",
+    "proffIndustryCode": "10002004"
+  },
+  {
+    "industryName": "Datakommunikation",
+    "proffIndustryCode": "10002029"
+  },
+  {
+    "industryName": "Datakonsulter",
+    "proffIndustryCode": "10002043"
+  },
+  {
+    "industryName": "Dataservice",
+    "proffIndustryCode": "10002063"
+  },
+  {
+    "industryName": "Datasäkerhet",
+    "proffIndustryCode": "10002076"
+  },
+  {
+    "industryName": "Datautbildning, dataprogram, systemutveckling",
+    "proffIndustryCode": "10002102"
+  },
+  {
+    "industryName": "Datautveckling, systemutveckling, programutveckling",
+    "proffIndustryCode": "10002115"
+  },
+  {
+    "industryName": "Datorer - Installationer",
+    "proffIndustryCode": "10001020"
+  },
+  {
+    "industryName": "Datorer - Kringutrustningar",
+    "proffIndustryCode": "10001033"
+  },
+  {
+    "industryName": "Datorer - Persondatorer",
+    "proffIndustryCode": "10001046"
+  },
+  {
+    "industryName": "Datorer - Service",
+    "proffIndustryCode": "10001059"
+  },
+  {
+    "industryName": "Datorer och kringutrustningar - Partihandel",
+    "proffIndustryCode": "10241776"
+  },
+  {
+    "industryName": "Datorer och kringutrustningar - tillverkning",
+    "proffIndustryCode": "10241777"
+  },
+  {
+    "industryName": "Dekoratörer",
+    "proffIndustryCode": "10001097"
+  },
+  {
+    "industryName": "Delikatesser",
+    "proffIndustryCode": "10001110"
+  },
+  {
+    "industryName": "Designers, formgivare",
+    "proffIndustryCode": "10001136"
+  },
+  {
+    "industryName": "Detaljhandel",
+    "proffIndustryCode": "10241778"
+  },
+  {
+    "industryName": "Detaljhandel - annat",
+    "proffIndustryCode": "10241779"
+  },
+  {
+    "industryName": "Diamantverktyg",
+    "proffIndustryCode": "10001149"
+  },
+  {
+    "industryName": "Direktmarknadsföring",
+    "proffIndustryCode": "10001162"
+  },
+  {
+    "industryName": "Distribution",
+    "proffIndustryCode": "10002141"
+  },
+  {
+    "industryName": "Djurartiklar, djurfoder",
+    "proffIndustryCode": "10002154"
+  },
+  {
+    "industryName": "Dokumentation, information",
+    "proffIndustryCode": "10002175"
+  },
+  {
+    "industryName": "Dryckesautomater",
+    "proffIndustryCode": "10002188"
+  },
+  {
+    "industryName": "Dryckesvaror",
+    "proffIndustryCode": "10241780"
+  },
+  {
+    "industryName": "Dryckesvaror - grossist",
+    "proffIndustryCode": "10241781"
+  },
+  {
+    "industryName": "Dykeri, dykeriarbeten",
+    "proffIndustryCode": "10002201"
+  },
+  {
+    "industryName": "Däck",
+    "proffIndustryCode": "10002214"
+  },
+  {
+    "industryName": "Dörrar, portar",
+    "proffIndustryCode": "10002227"
+  },
+  {
+    "industryName": "E-handel",
+    "proffIndustryCode": "10002370"
+  },
+  {
+    "industryName": "E-handel - Program, system",
+    "proffIndustryCode": "10002383"
+  },
+  {
+    "industryName": "Efterforskning",
+    "proffIndustryCode": "10241782"
+  },
+  {
+    "industryName": "Eldfast material",
+    "proffIndustryCode": "10241556"
+  },
+  {
+    "industryName": "Elektrisk installationsmaterial - tillverkning",
+    "proffIndustryCode": "10241557"
+  },
+  {
+    "industryName": "Elektromekaniska verkstäder",
+    "proffIndustryCode": "10002420"
+  },
+  {
+    "industryName": "Elektronik - Komponenter",
+    "proffIndustryCode": "10002433"
+  },
+  {
+    "industryName": "Elektronik - Legotillverkning",
+    "proffIndustryCode": "10002446"
+  },
+  {
+    "industryName": "Elektronik - Produktionsutrustningar",
+    "proffIndustryCode": "10002459"
+  },
+  {
+    "industryName": "Elektronik - Systemkomponenter",
+    "proffIndustryCode": "10002472"
+  },
+  {
+    "industryName": "Elektronik - Tillverkning",
+    "proffIndustryCode": "10241558"
+  },
+  {
+    "industryName": "Elektronik- och telekommunikationsutrustning",
+    "proffIndustryCode": "10241559"
+  },
+  {
+    "industryName": "Elektronik- och telekommunikationsutrustning - grossist",
+    "proffIndustryCode": "10241560"
+  },
+  {
+    "industryName": "Elinstallationer",
+    "proffIndustryCode": "10002498"
+  },
+  {
+    "industryName": "Elmaterial - reparationer",
+    "proffIndustryCode": "10241561"
+  },
+  {
+    "industryName": "Elmateriel",
+    "proffIndustryCode": "10002519"
+  },
+  {
+    "industryName": "Elmateriel - Komponenter",
+    "proffIndustryCode": "10002540"
+  },
+  {
+    "industryName": "Elmotorer, generatorer",
+    "proffIndustryCode": "10002558"
+  },
+  {
+    "industryName": "Elmotorer, generatorer - produktion",
+    "proffIndustryCode": "10241562"
+  },
+  {
+    "industryName": "Energieffektivisering",
+    "proffIndustryCode": "10002571"
+  },
+  {
+    "industryName": "Energiförsörjning",
+    "proffIndustryCode": "10002584"
+  },
+  {
+    "industryName": "Energihandel",
+    "proffIndustryCode": "10241563"
+  },
+  {
+    "industryName": "Energihandel - annat",
+    "proffIndustryCode": "10241564"
+  },
+  {
+    "industryName": "Entreprenadmaskiner",
+    "proffIndustryCode": "10002605"
+  },
+  {
+    "industryName": "Entreprenadmaskinsarbeten",
+    "proffIndustryCode": "10002619"
+  },
+  {
+    "industryName": "Entreprenörer",
+    "proffIndustryCode": "10241565"
+  },
+  {
+    "industryName": "Ergonomi - Konsulter, utrustningar",
+    "proffIndustryCode": "10002253"
+  },
+  {
+    "industryName": "Etiketter, etikettutrustningar",
+    "proffIndustryCode": "10002265"
+  },
+  {
+    "industryName": "Evenemangsproduktioner",
+    "proffIndustryCode": "10002292"
+  },
+  {
+    "industryName": "Facklig, vetenskaplig och teknisk verksamhet",
+    "proffIndustryCode": "10241566"
+  },
+  {
+    "industryName": "Fackskolor",
+    "proffIndustryCode": "10241567"
+  },
+  {
+    "industryName": "Fartyg, varv",
+    "proffIndustryCode": "10002306"
+  },
+  {
+    "industryName": "Fasadbehandling",
+    "proffIndustryCode": "10002318"
+  },
+  {
+    "industryName": "Fastighetsbolag, lokaler",
+    "proffIndustryCode": "10002331"
+  },
+  {
+    "industryName": "Fastighetsförvaltning",
+    "proffIndustryCode": "10239411"
+  },
+  {
+    "industryName": "Fastighetsförvaltning, fastighetsskötsel",
+    "proffIndustryCode": "10002344"
+  },
+  {
+    "industryName": "Fastighetsmäklare",
+    "proffIndustryCode": "10002357"
+  },
+  {
+    "industryName": "Fastighetsutveckling",
+    "proffIndustryCode": "10002806"
+  },
+  {
+    "industryName": "Fastighetsvärderingar, besiktningar",
+    "proffIndustryCode": "10002819"
+  },
+  {
+    "industryName": "Fiberoptik",
+    "proffIndustryCode": "10002832"
+  },
+  {
+    "industryName": "Film, musik-, Distribution",
+    "proffIndustryCode": "10002845"
+  },
+  {
+    "industryName": "Filter",
+    "proffIndustryCode": "10002857"
+  },
+  {
+    "industryName": "Finansbolag, finansiella tjänster",
+    "proffIndustryCode": "10002878"
+  },
+  {
+    "industryName": "Finanssystem och handelssystem",
+    "proffIndustryCode": "10002891"
+  },
+  {
+    "industryName": "Fisk, skaldjur",
+    "proffIndustryCode": "10002903"
+  },
+  {
+    "industryName": "Fisk, skaldjur - Grossister",
+    "proffIndustryCode": "10002918"
+  },
+  {
+    "industryName": "Fisk-, skaldjursodling - produktion",
+    "proffIndustryCode": "10241568"
+  },
+  {
+    "industryName": "Fiskeredskap",
+    "proffIndustryCode": "10002937"
+  },
+  {
+    "industryName": "Fiskodling, skaldjursodling, sportfiske",
+    "proffIndustryCode": "10002950"
+  },
+  {
+    "industryName": "Fjädrar",
+    "proffIndustryCode": "10002963"
+  },
+  {
+    "industryName": "Fjärrvärme",
+    "proffIndustryCode": "10241570"
+  },
+  {
+    "industryName": "Flaggor, flaggstänger",
+    "proffIndustryCode": "10002976"
+  },
+  {
+    "industryName": "Flygfrakt, flygresor",
+    "proffIndustryCode": "10002989"
+  },
+  {
+    "industryName": "Flygplan, utrustningar",
+    "proffIndustryCode": "10003002"
+  },
+  {
+    "industryName": "Flygplan, utrustningar - reparationer och underhåll",
+    "proffIndustryCode": "10241571"
+  },
+  {
+    "industryName": "Flygplan, utrustningar - tillverkning",
+    "proffIndustryCode": "10241572"
+  },
+  {
+    "industryName": "Flygplatser",
+    "proffIndustryCode": "10003015"
+  },
+  {
+    "industryName": "Flyktingförläggning",
+    "proffIndustryCode": "10241573"
+  },
+  {
+    "industryName": "Flyttfirmor",
+    "proffIndustryCode": "10003028"
+  },
+  {
+    "industryName": "Fläktar",
+    "proffIndustryCode": "10003041"
+  },
+  {
+    "industryName": "Fodermedel",
+    "proffIndustryCode": "10003054"
+  },
+  {
+    "industryName": "Fordonsreparationer",
+    "proffIndustryCode": "10003066"
+  },
+  {
+    "industryName": "Fordonsutrustningar, bilverkstadsutrustningar",
+    "proffIndustryCode": "10002632"
+  },
+  {
+    "industryName": "Formverktyg, pressverktyg",
+    "proffIndustryCode": "10002645"
+  },
+  {
+    "industryName": "Forskning",
+    "proffIndustryCode": "10002658"
+  },
+  {
+    "industryName": "Forskning och utveckling",
+    "proffIndustryCode": "10002679"
+  },
+  {
+    "industryName": "Fotografer",
+    "proffIndustryCode": "10002685"
+  },
+  {
+    "industryName": "Fotoutrustningar",
+    "proffIndustryCode": "10002710"
+  },
+  {
+    "industryName": "Frisörer",
+    "proffIndustryCode": "10241577"
+  },
+  {
+    "industryName": "Fritidsbåtar och utrustning",
+    "proffIndustryCode": "10241578"
+  },
+  {
+    "industryName": "Fritidsverksamhet",
+    "proffIndustryCode": "10241580"
+  },
+  {
+    "industryName": "Frukt, bär och grönsaker - grossister",
+    "proffIndustryCode": "10241581"
+  },
+  {
+    "industryName": "Fruktleveranser, vattenleveranser",
+    "proffIndustryCode": "10002736"
+  },
+  {
+    "industryName": "Färger, lacker, tapeter",
+    "proffIndustryCode": "10002745"
+  },
+  {
+    "industryName": "Färger, lacker, tapeter - grossist",
+    "proffIndustryCode": "10241582"
+  },
+  {
+    "industryName": "Färger, lacker, tapeter - tillverkning",
+    "proffIndustryCode": "10241583"
+  },
+  {
+    "industryName": "Fästelement",
+    "proffIndustryCode": "10002759"
+  },
+  {
+    "industryName": "Fönster",
+    "proffIndustryCode": "10002772"
+  },
+  {
+    "industryName": "Föreningar",
+    "proffIndustryCode": "10241584"
+  },
+  {
+    "industryName": "Företagarcentrum, näringslivsbolag",
+    "proffIndustryCode": "10002786"
+  },
+  {
+    "industryName": "Företagshälsovård, arbetsmiljökonsulter",
+    "proffIndustryCode": "10003115"
+  },
+  {
+    "industryName": "Företagsprofilering",
+    "proffIndustryCode": "10003144"
+  },
+  {
+    "industryName": "Företagsservice, facilities management",
+    "proffIndustryCode": "10003157"
+  },
+  {
+    "industryName": "Företagsutveckling",
+    "proffIndustryCode": "10003170"
+  },
+  {
+    "industryName": "Förlagsbyråer",
+    "proffIndustryCode": "10003183"
+  },
+  {
+    "industryName": "Förpackningar",
+    "proffIndustryCode": "10241585"
+  },
+  {
+    "industryName": "Förpackningar - Handel, konsument, kontor",
+    "proffIndustryCode": "10003345"
+  },
+  {
+    "industryName": "Förpackningar - Industrin",
+    "proffIndustryCode": "10003358"
+  },
+  {
+    "industryName": "Förpackningar - Transportförpackningar",
+    "proffIndustryCode": "10003379"
+  },
+  {
+    "industryName": "Förpackningsmaskiner",
+    "proffIndustryCode": "10003392"
+  },
+  {
+    "industryName": "Förskolor",
+    "proffIndustryCode": "10241586"
+  },
+  {
+    "industryName": "Försvaret",
+    "proffIndustryCode": "10003405"
+  },
+  {
+    "industryName": "Försäkringar",
+    "proffIndustryCode": "10003406"
+  },
+  {
+    "industryName": "Försäkringskassan",
+    "proffIndustryCode": "10241587"
+  },
+  {
+    "industryName": "Garner, vävnader",
+    "proffIndustryCode": "10003421"
+  },
+  {
+    "industryName": "Gaser, utrustningar",
+    "proffIndustryCode": "10003434"
+  },
+  {
+    "industryName": "Gasproduktion",
+    "proffIndustryCode": "10241590"
+  },
+  {
+    "industryName": "Gatukök",
+    "proffIndustryCode": "10241591"
+  },
+  {
+    "industryName": "Gipsprodukter, gips och kalk",
+    "proffIndustryCode": "10241593"
+  },
+  {
+    "industryName": "Gipsprodukter, gips och kalk - tillverkning",
+    "proffIndustryCode": "10241594"
+  },
+  {
+    "industryName": "Gjuterier, gjutgods",
+    "proffIndustryCode": "10003447"
+  },
+  {
+    "industryName": "Glas, glasvaror",
+    "proffIndustryCode": "10003473"
+  },
+  {
+    "industryName": "Glasarbeten",
+    "proffIndustryCode": "10003486"
+  },
+  {
+    "industryName": "Glass",
+    "proffIndustryCode": "10003499"
+  },
+  {
+    "industryName": "Golfbanor",
+    "proffIndustryCode": "10242083"
+  },
+  {
+    "industryName": "Golvbeläggningar",
+    "proffIndustryCode": "10003536"
+  },
+  {
+    "industryName": "Golvinläggningar",
+    "proffIndustryCode": "10003549"
+  },
+  {
+    "industryName": "Golvslipning, golvvård",
+    "proffIndustryCode": "10003562"
+  },
+  {
+    "industryName": "Gravyrer, gravyrutrustningar",
+    "proffIndustryCode": "10003209"
+  },
+  {
+    "industryName": "Grisuppfödning",
+    "proffIndustryCode": "10241595"
+  },
+  {
+    "industryName": "Grossister",
+    "proffIndustryCode": "10241596"
+  },
+  {
+    "industryName": "Grundskolor",
+    "proffIndustryCode": "10241597"
+  },
+  {
+    "industryName": "Grönsaker",
+    "proffIndustryCode": "10003222"
+  },
+  {
+    "industryName": "Guider",
+    "proffIndustryCode": "10241598"
+  },
+  {
+    "industryName": "Guld, silver, ädelstenar",
+    "proffIndustryCode": "10003235"
+  },
+  {
+    "industryName": "Guldsmeder",
+    "proffIndustryCode": "10241599"
+  },
+  {
+    "industryName": "Gummi och plastprodukter - tillverkning",
+    "proffIndustryCode": "10241600"
+  },
+  {
+    "industryName": "Gummivaror",
+    "proffIndustryCode": "10003249"
+  },
+  {
+    "industryName": "Gödningsmedel",
+    "proffIndustryCode": "10241602"
+  },
+  {
+    "industryName": "Gödningsmedel - produktion",
+    "proffIndustryCode": "10241603"
+  },
+  {
+    "industryName": "Hallbyggnader",
+    "proffIndustryCode": "10003262"
+  },
+  {
+    "industryName": "Hamnar",
+    "proffIndustryCode": "10003275"
+  },
+  {
+    "industryName": "Handikapputrustningar",
+    "proffIndustryCode": "10003307"
+  },
+  {
+    "industryName": "Havs- och kustfiske",
+    "proffIndustryCode": "10241607"
+  },
+  {
+    "industryName": "Hemservice",
+    "proffIndustryCode": "10003333"
+  },
+  {
+    "industryName": "Hissar, rulltrappor",
+    "proffIndustryCode": "10004018"
+  },
+  {
+    "industryName": "Historiska minnesmärken och byggnader",
+    "proffIndustryCode": "10241608"
+  },
+  {
+    "industryName": "Holdingbolag",
+    "proffIndustryCode": "10241609"
+  },
+  {
+    "industryName": "Hotell",
+    "proffIndustryCode": "10239424"
+  },
+  {
+    "industryName": "Hotellbokning, konferensbokning",
+    "proffIndustryCode": "10004049"
+  },
+  {
+    "industryName": "Hudvårdsprodukter",
+    "proffIndustryCode": "10241610"
+  },
+  {
+    "industryName": "Human resources, HR",
+    "proffIndustryCode": "10004062"
+  },
+  {
+    "industryName": "Hus",
+    "proffIndustryCode": "10004075"
+  },
+  {
+    "industryName": "Hushållsnära tjänster",
+    "proffIndustryCode": "10241612"
+  },
+  {
+    "industryName": "Hushållsutrustningar, vitvaror",
+    "proffIndustryCode": "10004115"
+  },
+  {
+    "industryName": "Hushållsutrustningar, vitvaror - grossister",
+    "proffIndustryCode": "10241613"
+  },
+  {
+    "industryName": "Hushållsutrustningar, vitvaror - tillverkning",
+    "proffIndustryCode": "10241614"
+  },
+  {
+    "industryName": "Husvagnar, husbilar",
+    "proffIndustryCode": "10004129"
+  },
+  {
+    "industryName": "Hydraulik",
+    "proffIndustryCode": "10004141"
+  },
+  {
+    "industryName": "Hälsokost, naturläkemedel",
+    "proffIndustryCode": "10004162"
+  },
+  {
+    "industryName": "Hälsotjänster",
+    "proffIndustryCode": "10241615"
+  },
+  {
+    "industryName": "Hästhållning",
+    "proffIndustryCode": "10241616"
+  },
+  {
+    "industryName": "Hästsportartiklar",
+    "proffIndustryCode": "10004175"
+  },
+  {
+    "industryName": "Högskolor, universitet",
+    "proffIndustryCode": "10004196"
+  },
+  {
+    "industryName": "Högtrycksutrustningar",
+    "proffIndustryCode": "10004197"
+  },
+  {
+    "industryName": "IT - övrigt",
+    "proffIndustryCode": "10241621"
+  },
+  {
+    "industryName": "Idrottslag och klubbar",
+    "proffIndustryCode": "10241617"
+  },
+  {
+    "industryName": "Inbrottsskydd",
+    "proffIndustryCode": "10004223"
+  },
+  {
+    "industryName": "Industriautomation",
+    "proffIndustryCode": "10004236"
+  },
+  {
+    "industryName": "Industridesigners",
+    "proffIndustryCode": "10004257"
+  },
+  {
+    "industryName": "Industriellt underhåll",
+    "proffIndustryCode": "10004270"
+  },
+  {
+    "industryName": "Industriförnödenheter",
+    "proffIndustryCode": "10004283"
+  },
+  {
+    "industryName": "Informationskonsulter, kommunikationskonsulter",
+    "proffIndustryCode": "10004296"
+  },
+  {
+    "industryName": "Ingenjör",
+    "proffIndustryCode": "10004310"
+  },
+  {
+    "industryName": "Ingenjörer - Byggnadsteknik, samhällsplanering",
+    "proffIndustryCode": "10004323"
+  },
+  {
+    "industryName": "Ingenjörer - Elektroteknik",
+    "proffIndustryCode": "10004336"
+  },
+  {
+    "industryName": "Ingenjörer - Mätteknik",
+    "proffIndustryCode": "10004349"
+  },
+  {
+    "industryName": "Ingenjörer - VVS-, miljöteknik",
+    "proffIndustryCode": "10004365"
+  },
+  {
+    "industryName": "Ingenjörer, ingenjörsbyråer",
+    "proffIndustryCode": "10004378"
+  },
+  {
+    "industryName": "Inkassoverksamhet, kreditupplysningsverksamhet",
+    "proffIndustryCode": "10004391"
+  },
+  {
+    "industryName": "Inredning - Offentlig miljö",
+    "proffIndustryCode": "10004417"
+  },
+  {
+    "industryName": "Inredningar",
+    "proffIndustryCode": "10004431"
+  },
+  {
+    "industryName": "Insatsvaror",
+    "proffIndustryCode": "10241618"
+  },
+  {
+    "industryName": "Insatsvaror - grossister",
+    "proffIndustryCode": "10241619"
+  },
+  {
+    "industryName": "Instrument",
+    "proffIndustryCode": "10004443"
+  },
+  {
+    "industryName": "Internationella organisationer",
+    "proffIndustryCode": "10241620"
+  },
+  {
+    "industryName": "Internet - Konsulter, operatörer",
+    "proffIndustryCode": "10004457"
+  },
+  {
+    "industryName": "Internet-Affärsportaler",
+    "proffIndustryCode": "10004470"
+  },
+  {
+    "industryName": "Internetbyråer",
+    "proffIndustryCode": "10004496"
+  },
+  {
+    "industryName": "Investmentbanker, Investmentbolag",
+    "proffIndustryCode": "10004508"
+  },
+  {
+    "industryName": "Isoleringsentreprenörer",
+    "proffIndustryCode": "10004520"
+  },
+  {
+    "industryName": "Isoleringsmaterial",
+    "proffIndustryCode": "10004533"
+  },
+  {
+    "industryName": "Jakt, vilt och naturvård",
+    "proffIndustryCode": "10241622"
+  },
+  {
+    "industryName": "Jordbruk",
+    "proffIndustryCode": "10241623"
+  },
+  {
+    "industryName": "Jordbruk - andra tjänster",
+    "proffIndustryCode": "10241624"
+  },
+  {
+    "industryName": "Jordbruk - boskap och djurhållning",
+    "proffIndustryCode": "10241625"
+  },
+  {
+    "industryName": "Jordbruk - mjölkproduktion",
+    "proffIndustryCode": "10241626"
+  },
+  {
+    "industryName": "Jordbruk - odling",
+    "proffIndustryCode": "10241627"
+  },
+  {
+    "industryName": "Jordbruk - odling och djurhållning",
+    "proffIndustryCode": "10241628"
+  },
+  {
+    "industryName": "Jordbruksprodukter, textilråvaror och djur - agentur",
+    "proffIndustryCode": "10241629"
+  },
+  {
+    "industryName": "Juridiska byråer",
+    "proffIndustryCode": "10004560"
+  },
+  {
+    "industryName": "Järn, stål",
+    "proffIndustryCode": "10003587"
+  },
+  {
+    "industryName": "Järn, stål - produktion",
+    "proffIndustryCode": "10241631"
+  },
+  {
+    "industryName": "Järn- och metallbrytning",
+    "proffIndustryCode": "10241630"
+  },
+  {
+    "industryName": "Järnkonstruktioner, metallkonstruktioner",
+    "proffIndustryCode": "10003600"
+  },
+  {
+    "industryName": "Järnvaror",
+    "proffIndustryCode": "10003613"
+  },
+  {
+    "industryName": "Järnvägstrafik",
+    "proffIndustryCode": "10003626"
+  },
+  {
+    "industryName": "Järnvägsutrustningar, spårvägsutrustningar",
+    "proffIndustryCode": "10003639"
+  },
+  {
+    "industryName": "Järnvägsutrustningar, spårvägsutrustningar - tillverkning",
+    "proffIndustryCode": "10241632"
+  },
+  {
+    "industryName": "Kablar och kraftledningar",
+    "proffIndustryCode": "10241633"
+  },
+  {
+    "industryName": "Kablar och kraftledningar - tillverkning",
+    "proffIndustryCode": "10241634"
+  },
+  {
+    "industryName": "Kaffe och te - agenturer",
+    "proffIndustryCode": "10241635"
+  },
+  {
+    "industryName": "Kakel - tillverkning",
+    "proffIndustryCode": "10241636"
+  },
+  {
+    "industryName": "Kakel, klinker",
+    "proffIndustryCode": "10003665"
+  },
+  {
+    "industryName": "Kaminer, öppna spisar",
+    "proffIndustryCode": "10003690"
+  },
+  {
+    "industryName": "Karosserifabriker och verkstäder",
+    "proffIndustryCode": "10241637"
+  },
+  {
+    "industryName": "Kassaskåp, värdeskåp",
+    "proffIndustryCode": "10003714"
+  },
+  {
+    "industryName": "Kemikalier, industrikemikaleier - grossist",
+    "proffIndustryCode": "10241638"
+  },
+  {
+    "industryName": "Kemikalier, industrikemikalier",
+    "proffIndustryCode": "10003740"
+  },
+  {
+    "industryName": "Kemikalier, industrikemikalier - tillverkning",
+    "proffIndustryCode": "10241639"
+  },
+  {
+    "industryName": "Kemiska, kemisk-tekniska produkter",
+    "proffIndustryCode": "10003761"
+  },
+  {
+    "industryName": "Keramiska produkter",
+    "proffIndustryCode": "10003775"
+  },
+  {
+    "industryName": "Klockor, ur",
+    "proffIndustryCode": "10003788"
+  },
+  {
+    "industryName": "Klockor, ur - produktion",
+    "proffIndustryCode": "10241640"
+  },
+  {
+    "industryName": "Kläder",
+    "proffIndustryCode": "10003801"
+  },
+  {
+    "industryName": "Kläder - produktion",
+    "proffIndustryCode": "10241641"
+  },
+  {
+    "industryName": "Kläder, skor",
+    "proffIndustryCode": "10241642"
+  },
+  {
+    "industryName": "Kol- och raffinerade petroleumprodukter - tillverkning",
+    "proffIndustryCode": "10241643"
+  },
+  {
+    "industryName": "Kommuner",
+    "proffIndustryCode": "10003829"
+  },
+  {
+    "industryName": "Kommuner, näringslivskontor",
+    "proffIndustryCode": "10003830"
+  },
+  {
+    "industryName": "Kompetensutveckling",
+    "proffIndustryCode": "10003851"
+  },
+  {
+    "industryName": "Konfektion",
+    "proffIndustryCode": "10241644"
+  },
+  {
+    "industryName": "Konfektyrer, Choklad,",
+    "proffIndustryCode": "10003864"
+  },
+  {
+    "industryName": "Konferensarrangörer",
+    "proffIndustryCode": "10003877"
+  },
+  {
+    "industryName": "Konferenslokaler, kurslokaler, konferensgårdar",
+    "proffIndustryCode": "10003890"
+  },
+  {
+    "industryName": "Konferensutrustningar, presentationsutrustningar",
+    "proffIndustryCode": "10003903"
+  },
+  {
+    "industryName": "Konst",
+    "proffIndustryCode": "10003937"
+  },
+  {
+    "industryName": "Konstnärer",
+    "proffIndustryCode": "10241645"
+  },
+  {
+    "industryName": "Konsulter",
+    "proffIndustryCode": "10003950"
+  },
+  {
+    "industryName": "Kontor- och teletjänster",
+    "proffIndustryCode": "10241646"
+  },
+  {
+    "industryName": "Kontors-, kopieringsmaskiner",
+    "proffIndustryCode": "10241647"
+  },
+  {
+    "industryName": "Kontors-, kopieringsmaskiner - tillverkning",
+    "proffIndustryCode": "10241648"
+  },
+  {
+    "industryName": "Kontorshotell, industrihotell",
+    "proffIndustryCode": "10003964"
+  },
+  {
+    "industryName": "Kontorsinredningar",
+    "proffIndustryCode": "10003976"
+  },
+  {
+    "industryName": "Kontorsmaskiner",
+    "proffIndustryCode": "10004586"
+  },
+  {
+    "industryName": "Kontorsmateriel",
+    "proffIndustryCode": "10004612"
+  },
+  {
+    "industryName": "Kontorstjänster",
+    "proffIndustryCode": "10241649"
+  },
+  {
+    "industryName": "Kopieringsarbeten, grafisk produktion",
+    "proffIndustryCode": "10004625"
+  },
+  {
+    "industryName": "Kosmetik - tillverkare och grossister",
+    "proffIndustryCode": "10241650"
+  },
+  {
+    "industryName": "Kosmetik, parfym och frisörartiklar",
+    "proffIndustryCode": "10241651"
+  },
+  {
+    "industryName": "Kosmetika, hygienartiklar",
+    "proffIndustryCode": "10004638"
+  },
+  {
+    "industryName": "Kulturskolor och undervisning",
+    "proffIndustryCode": "10241652"
+  },
+  {
+    "industryName": "Kurirverksamhet",
+    "proffIndustryCode": "10004652"
+  },
+  {
+    "industryName": "Kvalitetsledningssystem",
+    "proffIndustryCode": "10004717"
+  },
+  {
+    "industryName": "Kyl-, frysanläggningar - tillverkning",
+    "proffIndustryCode": "10241653"
+  },
+  {
+    "industryName": "Kylanläggningar, frysanläggningar",
+    "proffIndustryCode": "10004730"
+  },
+  {
+    "industryName": "Köksinredningar",
+    "proffIndustryCode": "10004743"
+  },
+  {
+    "industryName": "Köksinredningar - agentur och grossist",
+    "proffIndustryCode": "10241654"
+  },
+  {
+    "industryName": "Kött-, slakteriprodukter - grossist",
+    "proffIndustryCode": "10241655"
+  },
+  {
+    "industryName": "Köttprodukter, slakteriprodukter",
+    "proffIndustryCode": "10004756"
+  },
+  {
+    "industryName": "Laboratorieanalyser",
+    "proffIndustryCode": "10004769"
+  },
+  {
+    "industryName": "Laboratorieutrustningar",
+    "proffIndustryCode": "10004782"
+  },
+  {
+    "industryName": "Lackeringsarbeten",
+    "proffIndustryCode": "10004795"
+  },
+  {
+    "industryName": "Lager",
+    "proffIndustryCode": "10004808"
+  },
+  {
+    "industryName": "Lagerinredning, förrådsinredning",
+    "proffIndustryCode": "10004821"
+  },
+  {
+    "industryName": "Lantbruk, lantbrukare",
+    "proffIndustryCode": "10008770"
+  },
+  {
+    "industryName": "Lantbruksmaskiner, förnödenheter",
+    "proffIndustryCode": "10004835"
+  },
+  {
+    "industryName": "Lantbruksmaskiner, förnödenheter - grossist",
+    "proffIndustryCode": "10241657"
+  },
+  {
+    "industryName": "Larm, övervakningsutrustningar",
+    "proffIndustryCode": "10004851"
+  },
+  {
+    "industryName": "Laserarbeten, utrustningar",
+    "proffIndustryCode": "10004864"
+  },
+  {
+    "industryName": "Lastbilar, släpfordon",
+    "proffIndustryCode": "10004878"
+  },
+  {
+    "industryName": "Lastkajer, dockningsanläggningar",
+    "proffIndustryCode": "10004891"
+  },
+  {
+    "industryName": "Lastning och lossning",
+    "proffIndustryCode": "10241658"
+  },
+  {
+    "industryName": "Lastpallar, lastmateriel",
+    "proffIndustryCode": "10004903"
+  },
+  {
+    "industryName": "Legoarbeten",
+    "proffIndustryCode": "10004929"
+  },
+  {
+    "industryName": "Leksaker, hobbyartiklar",
+    "proffIndustryCode": "10004950"
+  },
+  {
+    "industryName": "Levande djur",
+    "proffIndustryCode": "10241661"
+  },
+  {
+    "industryName": "Levande djur - grossist",
+    "proffIndustryCode": "10241662"
+  },
+  {
+    "industryName": "Lim, tätningsmedel",
+    "proffIndustryCode": "10004976"
+  },
+  {
+    "industryName": "Livsmedel",
+    "proffIndustryCode": "10004989"
+  },
+  {
+    "industryName": "Livsmedel - agenturer och grossister",
+    "proffIndustryCode": "10241663"
+  },
+  {
+    "industryName": "Livsmedel - tillverkning",
+    "proffIndustryCode": "10241664"
+  },
+  {
+    "industryName": "Livsmedelsindustrimaskiner",
+    "proffIndustryCode": "10005002"
+  },
+  {
+    "industryName": "Ljudanläggningar, ljusanläggningar, bildanläggningar",
+    "proffIndustryCode": "10005015"
+  },
+  {
+    "industryName": "Ljudproduktion, musikproduktion",
+    "proffIndustryCode": "10005028"
+  },
+  {
+    "industryName": "Logistik",
+    "proffIndustryCode": "10005054"
+  },
+  {
+    "industryName": "Lyftanordningar, lyftutrustningar",
+    "proffIndustryCode": "10005067"
+  },
+  {
+    "industryName": "Läder och lädervaror",
+    "proffIndustryCode": "10241666"
+  },
+  {
+    "industryName": "Läder och lädervaror - tillverkning",
+    "proffIndustryCode": "10241667"
+  },
+  {
+    "industryName": "Läder, skor, inredning, reseeffekter och textilier",
+    "proffIndustryCode": "10241668"
+  },
+  {
+    "industryName": "Läkare",
+    "proffIndustryCode": "10241669"
+  },
+  {
+    "industryName": "Läkemedel",
+    "proffIndustryCode": "10004703"
+  },
+  {
+    "industryName": "Läromedel",
+    "proffIndustryCode": "10005201"
+  },
+  {
+    "industryName": "Lås",
+    "proffIndustryCode": "10005088"
+  },
+  {
+    "industryName": "Lås och beslag - tillverkning",
+    "proffIndustryCode": "10241665"
+  },
+  {
+    "industryName": "Låssmeder",
+    "proffIndustryCode": "10004677"
+  },
+  {
+    "industryName": "MC, mopeder, skotrar",
+    "proffIndustryCode": "10005397"
+  },
+  {
+    "industryName": "Magasinering, lagring",
+    "proffIndustryCode": "10005214"
+  },
+  {
+    "industryName": "Magneter",
+    "proffIndustryCode": "10005227"
+  },
+  {
+    "industryName": "Malmer, industrimineraler",
+    "proffIndustryCode": "10005240"
+  },
+  {
+    "industryName": "Managementkonsulter",
+    "proffIndustryCode": "10005253"
+  },
+  {
+    "industryName": "Markentreprenörer, anläggningsentreprenörer",
+    "proffIndustryCode": "10005279"
+  },
+  {
+    "industryName": "Markiser",
+    "proffIndustryCode": "10005293"
+  },
+  {
+    "industryName": "Marknadsföringskonsulter",
+    "proffIndustryCode": "10005305"
+  },
+  {
+    "industryName": "Marknadsundersökningar",
+    "proffIndustryCode": "10005318"
+  },
+  {
+    "industryName": "Maskiner, produktion, fartyg och flygplan - agentur",
+    "proffIndustryCode": "10241670"
+  },
+  {
+    "industryName": "Maskiner, verktyg - begagnat service",
+    "proffIndustryCode": "10005331"
+  },
+  {
+    "industryName": "Maskinförnödenheter",
+    "proffIndustryCode": "10005344"
+  },
+  {
+    "industryName": "Maskinförnödenheter - reparationer",
+    "proffIndustryCode": "10241671"
+  },
+  {
+    "industryName": "Maskinförnödenheter - tillverkning",
+    "proffIndustryCode": "10241672"
+  },
+  {
+    "industryName": "Materialhantering - Maskiner, utrustningar",
+    "proffIndustryCode": "10005370"
+  },
+  {
+    "industryName": "Mattor",
+    "proffIndustryCode": "10005384"
+  },
+  {
+    "industryName": "Medicinteknisk utrustning",
+    "proffIndustryCode": "10005410"
+  },
+  {
+    "industryName": "Medicinteknisk utrustning - produktion",
+    "proffIndustryCode": "10241673"
+  },
+  {
+    "industryName": "Medieförmedling",
+    "proffIndustryCode": "10005431"
+  },
+  {
+    "industryName": "Medieförmedling, -reklamförsäljning",
+    "proffIndustryCode": "10005443"
+  },
+  {
+    "industryName": "Mejerivaror",
+    "proffIndustryCode": "10005456"
+  },
+  {
+    "industryName": "Mejerivaror - grossist",
+    "proffIndustryCode": "10241674"
+  },
+  {
+    "industryName": "Mekaniska verkstäder",
+    "proffIndustryCode": "10005469"
+  },
+  {
+    "industryName": "Metaller, legeringar",
+    "proffIndustryCode": "10005503"
+  },
+  {
+    "industryName": "Metaller, legeringar - Produktion",
+    "proffIndustryCode": "10241676"
+  },
+  {
+    "industryName": "Metaller, legeringar - Reparation",
+    "proffIndustryCode": "10241677"
+  },
+  {
+    "industryName": "Metaller, legeringar - grossist",
+    "proffIndustryCode": "10241675"
+  },
+  {
+    "industryName": "Metallglaspartier",
+    "proffIndustryCode": "10005516"
+  },
+  {
+    "industryName": "Metalltråd",
+    "proffIndustryCode": "10005529"
+  },
+  {
+    "industryName": "Metallurgisk industri",
+    "proffIndustryCode": "10241678"
+  },
+  {
+    "industryName": "Miljöteknik",
+    "proffIndustryCode": "10005555"
+  },
+  {
+    "industryName": "Miljövård, miljökonsulter",
+    "proffIndustryCode": "10005567"
+  },
+  {
+    "industryName": "Mineraler - tillverkning",
+    "proffIndustryCode": "10241679"
+  },
+  {
+    "industryName": "Mineralförädling",
+    "proffIndustryCode": "10241680"
+  },
+  {
+    "industryName": "Mineralvatten",
+    "proffIndustryCode": "10242084"
+  },
+  {
+    "industryName": "Mjölkproduktion",
+    "proffIndustryCode": "10241681"
+  },
+  {
+    "industryName": "Motorbanor",
+    "proffIndustryCode": "10242085"
+  },
+  {
+    "industryName": "Motorcykel, ATV och mopeder - agenturer och grossister",
+    "proffIndustryCode": "10241682"
+  },
+  {
+    "industryName": "Motorcykel, ATV och mopeder - detaljister",
+    "proffIndustryCode": "10241683"
+  },
+  {
+    "industryName": "Motorcykel, ATV och mopedverkstäder",
+    "proffIndustryCode": "10241684"
+  },
+  {
+    "industryName": "Motorer",
+    "proffIndustryCode": "10005653"
+  },
+  {
+    "industryName": "Motorrenoveringar",
+    "proffIndustryCode": "10005666"
+  },
+  {
+    "industryName": "Multimediaproduktioner",
+    "proffIndustryCode": "10005679"
+  },
+  {
+    "industryName": "Mur- och tegelsten",
+    "proffIndustryCode": "10241685"
+  },
+  {
+    "industryName": "Mur- och tegelsten - tillverkning",
+    "proffIndustryCode": "10241686"
+  },
+  {
+    "industryName": "Murare",
+    "proffIndustryCode": "10008788"
+  },
+  {
+    "industryName": "Museer",
+    "proffIndustryCode": "10241687"
+  },
+  {
+    "industryName": "Musik",
+    "proffIndustryCode": "10241688"
+  },
+  {
+    "industryName": "Musikinstrument",
+    "proffIndustryCode": "10005705"
+  },
+  {
+    "industryName": "Myndigheter, verk och nämnder",
+    "proffIndustryCode": "10005747"
+  },
+  {
+    "industryName": "Mynt och medaljer",
+    "proffIndustryCode": "10241689"
+  },
+  {
+    "industryName": "Mynt och medaljer - tillverkning",
+    "proffIndustryCode": "10241690"
+  },
+  {
+    "industryName": "Märkningsutrustningar",
+    "proffIndustryCode": "10005761"
+  },
+  {
+    "industryName": "Mässor, utställningar",
+    "proffIndustryCode": "10005774"
+  },
+  {
+    "industryName": "Mässprodukter, utställningsproduktion",
+    "proffIndustryCode": "10005787"
+  },
+  {
+    "industryName": "Mätinstrument, testutrustningar",
+    "proffIndustryCode": "10005808"
+  },
+  {
+    "industryName": "Måleriarbeten",
+    "proffIndustryCode": "10005748"
+  },
+  {
+    "industryName": "Möbler",
+    "proffIndustryCode": "10005835"
+  },
+  {
+    "industryName": "Möbler - Produktion",
+    "proffIndustryCode": "10241691"
+  },
+  {
+    "industryName": "Möbler, hushållsartiklar och järnvaror - agentur",
+    "proffIndustryCode": "10241692"
+  },
+  {
+    "industryName": "Nyhetsservice och telegrambyråer",
+    "proffIndustryCode": "10241694"
+  },
+  {
+    "industryName": "Nätverk, kluster",
+    "proffIndustryCode": "10005870"
+  },
+  {
+    "industryName": "Nöjesparker",
+    "proffIndustryCode": "10241695"
+  },
+  {
+    "industryName": "Odling av potatis",
+    "proffIndustryCode": "10241696"
+  },
+  {
+    "industryName": "Odling av socker",
+    "proffIndustryCode": "10241697"
+  },
+  {
+    "industryName": "Odling av svamp",
+    "proffIndustryCode": "10241698"
+  },
+  {
+    "industryName": "Offentlig administration",
+    "proffIndustryCode": "10241700"
+  },
+  {
+    "industryName": "Oljor, oljeprodukt - tjänster",
+    "proffIndustryCode": "10241701"
+  },
+  {
+    "industryName": "Oljor, oljeprodukter",
+    "proffIndustryCode": "10005895"
+  },
+  {
+    "industryName": "Omvårdnad och omsorg",
+    "proffIndustryCode": "10241702"
+  },
+  {
+    "industryName": "Optik och optisk utrustning",
+    "proffIndustryCode": "10241703"
+  },
+  {
+    "industryName": "Optik och optisk utrustning - Produktion",
+    "proffIndustryCode": "10241704"
+  },
+  {
+    "industryName": "Organisationer",
+    "proffIndustryCode": "10005946"
+  },
+  {
+    "industryName": "Organisationskonsulter",
+    "proffIndustryCode": "10005959"
+  },
+  {
+    "industryName": "Organisationskonsulter - Administration",
+    "proffIndustryCode": "10005972"
+  },
+  {
+    "industryName": "Packningar, tätningar",
+    "proffIndustryCode": "10005149"
+  },
+  {
+    "industryName": "Paketering",
+    "proffIndustryCode": "10241705"
+  },
+  {
+    "industryName": "Papper, massa",
+    "proffIndustryCode": "10005162"
+  },
+  {
+    "industryName": "Pappersindustrimaskiner",
+    "proffIndustryCode": "10005175"
+  },
+  {
+    "industryName": "Pappersvaror",
+    "proffIndustryCode": "10005188"
+  },
+  {
+    "industryName": "Pappersvaror - Partihandel",
+    "proffIndustryCode": "10241706"
+  },
+  {
+    "industryName": "Pappersvaror - Produktion",
+    "proffIndustryCode": "10241707"
+  },
+  {
+    "industryName": "Parkanläggningar",
+    "proffIndustryCode": "10241708"
+  },
+  {
+    "industryName": "Parkering",
+    "proffIndustryCode": "10241709"
+  },
+  {
+    "industryName": "Parkeringsprodukter",
+    "proffIndustryCode": "10239445"
+  },
+  {
+    "industryName": "Partipolitiska organisationer",
+    "proffIndustryCode": "10241710"
+  },
+  {
+    "industryName": "Passagerartransporter",
+    "proffIndustryCode": "10241711"
+  },
+  {
+    "industryName": "Passersystem",
+    "proffIndustryCode": "10006019"
+  },
+  {
+    "industryName": "Patentbyråer",
+    "proffIndustryCode": "10006032"
+  },
+  {
+    "industryName": "Persienner, gardiner",
+    "proffIndustryCode": "10006075"
+  },
+  {
+    "industryName": "Personaluthyrning",
+    "proffIndustryCode": "10006088"
+  },
+  {
+    "industryName": "Pipeline",
+    "proffIndustryCode": "10241712"
+  },
+  {
+    "industryName": "Plastbearbetning",
+    "proffIndustryCode": "10006297"
+  },
+  {
+    "industryName": "Plaster- Helfabrikat, beställningsarbeten",
+    "proffIndustryCode": "10006310"
+  },
+  {
+    "industryName": "Plaster- Råvaror, halvfabrikat",
+    "proffIndustryCode": "10006331"
+  },
+  {
+    "industryName": "Plåt",
+    "proffIndustryCode": "10006357"
+  },
+  {
+    "industryName": "Plåtslagerier",
+    "proffIndustryCode": "10006370"
+  },
+  {
+    "industryName": "Polisämbetet",
+    "proffIndustryCode": "10006383"
+  },
+  {
+    "industryName": "Postorder/e-handel",
+    "proffIndustryCode": "10004483"
+  },
+  {
+    "industryName": "Presenningar, kapell, tält",
+    "proffIndustryCode": "10006384"
+  },
+  {
+    "industryName": "Presentartiklar",
+    "proffIndustryCode": "10006397"
+  },
+  {
+    "industryName": "Presentreklam, reklamartiklar",
+    "proffIndustryCode": "10006410"
+  },
+  {
+    "industryName": "Privat tjänsteutövning",
+    "proffIndustryCode": "10241714"
+  },
+  {
+    "industryName": "Producenter",
+    "proffIndustryCode": "10241715"
+  },
+  {
+    "industryName": "Profilkläder",
+    "proffIndustryCode": "10006457"
+  },
+  {
+    "industryName": "Projektledning",
+    "proffIndustryCode": "10006470"
+  },
+  {
+    "industryName": "Pumpar",
+    "proffIndustryCode": "10006499"
+  },
+  {
+    "industryName": "Pälsvaror",
+    "proffIndustryCode": "10241716"
+  },
+  {
+    "industryName": "Påsar",
+    "proffIndustryCode": "10006520"
+  },
+  {
+    "industryName": "Radio TV, video",
+    "proffIndustryCode": "10006546"
+  },
+  {
+    "industryName": "Radio, TV-programbolag",
+    "proffIndustryCode": "10006560"
+  },
+  {
+    "industryName": "Rederier",
+    "proffIndustryCode": "10006113"
+  },
+  {
+    "industryName": "Redovisning, bokföring",
+    "proffIndustryCode": "10006126"
+  },
+  {
+    "industryName": "Rehabilitering",
+    "proffIndustryCode": "10239389"
+  },
+  {
+    "industryName": "Reklambyråer",
+    "proffIndustryCode": "10006148"
+  },
+  {
+    "industryName": "Rekrytering",
+    "proffIndustryCode": "10006169"
+  },
+  {
+    "industryName": "Relationsmarknadsföring, CRM",
+    "proffIndustryCode": "10006182"
+  },
+  {
+    "industryName": "Religösa organisationer",
+    "proffIndustryCode": "10241717"
+  },
+  {
+    "industryName": "Rengöringsprodukter",
+    "proffIndustryCode": "10006206"
+  },
+  {
+    "industryName": "Rengöringsprodukter - Agentur- och partihandel",
+    "proffIndustryCode": "10241718"
+  },
+  {
+    "industryName": "Renhållningsentreprenörer, avfallshantering",
+    "proffIndustryCode": "10006219"
+  },
+  {
+    "industryName": "Reparatörer",
+    "proffIndustryCode": "10241719"
+  },
+  {
+    "industryName": "Reproduktion",
+    "proffIndustryCode": "10241720"
+  },
+  {
+    "industryName": "Reproutrustningar",
+    "proffIndustryCode": "10006245"
+  },
+  {
+    "industryName": "Reseeffekter",
+    "proffIndustryCode": "10241721"
+  },
+  {
+    "industryName": "Reservkraft",
+    "proffIndustryCode": "10006258"
+  },
+  {
+    "industryName": "Resor",
+    "proffIndustryCode": "10006271"
+  },
+  {
+    "industryName": "Resor - Internetbokning",
+    "proffIndustryCode": "10006284"
+  },
+  {
+    "industryName": "Restauranger",
+    "proffIndustryCode": "10006755"
+  },
+  {
+    "industryName": "Restaurangutrustningar, storköksutrustningar",
+    "proffIndustryCode": "10006767"
+  },
+  {
+    "industryName": "Revision",
+    "proffIndustryCode": "10006791"
+  },
+  {
+    "industryName": "Riskkapitalbolag",
+    "proffIndustryCode": "10006804"
+  },
+  {
+    "industryName": "Rivningsarbeten",
+    "proffIndustryCode": "10006817"
+  },
+  {
+    "industryName": "Robotar",
+    "proffIndustryCode": "10006830"
+  },
+  {
+    "industryName": "Rostfria arbeten",
+    "proffIndustryCode": "10006843"
+  },
+  {
+    "industryName": "Rostskyddsmedel, - rostskyddsbehandling",
+    "proffIndustryCode": "10006856"
+  },
+  {
+    "industryName": "Rymdfart",
+    "proffIndustryCode": "10241722"
+  },
+  {
+    "industryName": "Rättsväsendet",
+    "proffIndustryCode": "10006880"
+  },
+  {
+    "industryName": "Rör, rördelar",
+    "proffIndustryCode": "10006881"
+  },
+  {
+    "industryName": "Rörarbeten",
+    "proffIndustryCode": "10006894"
+  },
+  {
+    "industryName": "Sanering",
+    "proffIndustryCode": "10006920"
+  },
+  {
+    "industryName": "Screentryckerier",
+    "proffIndustryCode": "10006933"
+  },
+  {
+    "industryName": "Sjukvård",
+    "proffIndustryCode": "10241725"
+  },
+  {
+    "industryName": "Sjukvårdsartiklar",
+    "proffIndustryCode": "10006946"
+  },
+  {
+    "industryName": "Sjöentreprenader",
+    "proffIndustryCode": "10006972"
+  },
+  {
+    "industryName": "Skatterådgivning",
+    "proffIndustryCode": "10241727"
+  },
+  {
+    "industryName": "Skeppsklarerare, skeppsmäklare",
+    "proffIndustryCode": "10006989"
+  },
+  {
+    "industryName": "Skidsportanläggningar",
+    "proffIndustryCode": "10242086"
+  },
+  {
+    "industryName": "Skinn, läder och pälsvaror",
+    "proffIndustryCode": "10241728"
+  },
+  {
+    "industryName": "Skinn, läder och pälsvaror - grossister",
+    "proffIndustryCode": "10241729"
+  },
+  {
+    "industryName": "Skogsmaskiner",
+    "proffIndustryCode": "10007002"
+  },
+  {
+    "industryName": "Skogstjänster",
+    "proffIndustryCode": "10007014"
+  },
+  {
+    "industryName": "Skolor och utbildning",
+    "proffIndustryCode": "10241730"
+  },
+  {
+    "industryName": "Skor",
+    "proffIndustryCode": "10007026"
+  },
+  {
+    "industryName": "Skor - detaljister",
+    "proffIndustryCode": "10241732"
+  },
+  {
+    "industryName": "Skor och tillbehör - produktion",
+    "proffIndustryCode": "10241733"
+  },
+  {
+    "industryName": "Skorstensbyggare",
+    "proffIndustryCode": "10007039"
+  },
+  {
+    "industryName": "Skorstensrengöring, underhåll",
+    "proffIndustryCode": "10007053"
+  },
+  {
+    "industryName": "Skyddsutrustningar",
+    "proffIndustryCode": "10007079"
+  },
+  {
+    "industryName": "Skyltar, skyltställ",
+    "proffIndustryCode": "10007092"
+  },
+  {
+    "industryName": "Skyltar, skyltsystem - Digitala",
+    "proffIndustryCode": "10007108"
+  },
+  {
+    "industryName": "Skyltmaterial",
+    "proffIndustryCode": "10007127"
+  },
+  {
+    "industryName": "Slangar",
+    "proffIndustryCode": "10007140"
+  },
+  {
+    "industryName": "Slipmaterial, polermaterial, verktyg",
+    "proffIndustryCode": "10007161"
+  },
+  {
+    "industryName": "Släpfordon, trailers",
+    "proffIndustryCode": "10007174"
+  },
+  {
+    "industryName": "Smidesverkstäder",
+    "proffIndustryCode": "10007187"
+  },
+  {
+    "industryName": "Smycken, accessoarer",
+    "proffIndustryCode": "10007200"
+  },
+  {
+    "industryName": "Snickeriarbeten",
+    "proffIndustryCode": "10007234"
+  },
+  {
+    "industryName": "Snickeriprodukter",
+    "proffIndustryCode": "10007248"
+  },
+  {
+    "industryName": "Social omsorg, entreprenader",
+    "proffIndustryCode": "10007261"
+  },
+  {
+    "industryName": "Solskydd",
+    "proffIndustryCode": "10007285"
+  },
+  {
+    "industryName": "Spannmål, råtobak, utsäde och djurfoder - grossister",
+    "proffIndustryCode": "10241734"
+  },
+  {
+    "industryName": "Spannmål, spannmålsprodukter",
+    "proffIndustryCode": "10007313"
+  },
+  {
+    "industryName": "Spedition",
+    "proffIndustryCode": "10007325"
+  },
+  {
+    "industryName": "Spel, nöjesanläggningsutrustningar",
+    "proffIndustryCode": "10007344"
+  },
+  {
+    "industryName": "Spel, nöjesanläggningsutrustningar - tillverkning",
+    "proffIndustryCode": "10241736"
+  },
+  {
+    "industryName": "Spelutrustningar, lotteriutrustningar",
+    "proffIndustryCode": "10007357"
+  },
+  {
+    "industryName": "Spelutveckling, spelbolag",
+    "proffIndustryCode": "10007370"
+  },
+  {
+    "industryName": "Spisar, hällar",
+    "proffIndustryCode": "10007381"
+  },
+  {
+    "industryName": "Sport",
+    "proffIndustryCode": "10007394"
+  },
+  {
+    "industryName": "Sport - grossist",
+    "proffIndustryCode": "10241737"
+  },
+  {
+    "industryName": "Sport - produktion",
+    "proffIndustryCode": "10241738"
+  },
+  {
+    "industryName": "Sportanläggningar",
+    "proffIndustryCode": "10241739"
+  },
+  {
+    "industryName": "Sprängningsarbeten",
+    "proffIndustryCode": "10007420"
+  },
+  {
+    "industryName": "Sten",
+    "proffIndustryCode": "10007445"
+  },
+  {
+    "industryName": "Sten, sand, singel, makadam",
+    "proffIndustryCode": "10007458"
+  },
+  {
+    "industryName": "Stenarbeten",
+    "proffIndustryCode": "10006572"
+  },
+  {
+    "industryName": "Streckkoder, utrustningar",
+    "proffIndustryCode": "10006598"
+  },
+  {
+    "industryName": "Stugor",
+    "proffIndustryCode": "10006611"
+  },
+  {
+    "industryName": "Styrteknik, reglerteknik",
+    "proffIndustryCode": "10006622"
+  },
+  {
+    "industryName": "Städmaskiner",
+    "proffIndustryCode": "10006635"
+  },
+  {
+    "industryName": "Städredskap",
+    "proffIndustryCode": "10006648"
+  },
+  {
+    "industryName": "Städservice",
+    "proffIndustryCode": "10006661"
+  },
+  {
+    "industryName": "Ställningar",
+    "proffIndustryCode": "10006674"
+  },
+  {
+    "industryName": "Stängsel, stängselnät",
+    "proffIndustryCode": "10006702"
+  },
+  {
+    "industryName": "Svetsning, skärningsarbeten",
+    "proffIndustryCode": "10006716"
+  },
+  {
+    "industryName": "Svetsutrustningar, skärutrustningar",
+    "proffIndustryCode": "10006729"
+  },
+  {
+    "industryName": "Swimming-, bubbelpooler, SPA-utrustning",
+    "proffIndustryCode": "10006742"
+  },
+  {
+    "industryName": "Säkerhetssystem, säkerhetskonsulter",
+    "proffIndustryCode": "10007495"
+  },
+  {
+    "industryName": "Sågverk",
+    "proffIndustryCode": "10007482"
+  },
+  {
+    "industryName": "Takarbeten",
+    "proffIndustryCode": "10007546"
+  },
+  {
+    "industryName": "Takbeläggningar",
+    "proffIndustryCode": "10007560"
+  },
+  {
+    "industryName": "Talare, föredragshållare",
+    "proffIndustryCode": "10007572"
+  },
+  {
+    "industryName": "Tandläkare",
+    "proffIndustryCode": "10241740"
+  },
+  {
+    "industryName": "Tandtekniska arbeten",
+    "proffIndustryCode": "10007585"
+  },
+  {
+    "industryName": "Tapeter",
+    "proffIndustryCode": "10241741"
+  },
+  {
+    "industryName": "Tapetserare",
+    "proffIndustryCode": "10007599"
+  },
+  {
+    "industryName": "Taxi",
+    "proffIndustryCode": "10241742"
+  },
+  {
+    "industryName": "Tegel, tegelprodukter",
+    "proffIndustryCode": "10007610"
+  },
+  {
+    "industryName": "Tejper",
+    "proffIndustryCode": "10007623"
+  },
+  {
+    "industryName": "Teknikkonsulter",
+    "proffIndustryCode": "10007636"
+  },
+  {
+    "industryName": "Teknisk provning och analys",
+    "proffIndustryCode": "10241743"
+  },
+  {
+    "industryName": "Tekniska installationer",
+    "proffIndustryCode": "10007671"
+  },
+  {
+    "industryName": "Telefoner, utrustningar",
+    "proffIndustryCode": "10007684"
+  },
+  {
+    "industryName": "Telefonsystem",
+    "proffIndustryCode": "10007697"
+  },
+  {
+    "industryName": "Telekommunikation, teleoperatörer",
+    "proffIndustryCode": "10007723"
+  },
+  {
+    "industryName": "Telekonsulter",
+    "proffIndustryCode": "10007736"
+  },
+  {
+    "industryName": "Telemarketing",
+    "proffIndustryCode": "10007750"
+  },
+  {
+    "industryName": "Textilbehandling",
+    "proffIndustryCode": "10241744"
+  },
+  {
+    "industryName": "Textilier",
+    "proffIndustryCode": "10007763"
+  },
+  {
+    "industryName": "Textilier - Agentur",
+    "proffIndustryCode": "10241745"
+  },
+  {
+    "industryName": "Textilier - Partihandel",
+    "proffIndustryCode": "10241746"
+  },
+  {
+    "industryName": "Textilier - Produktion",
+    "proffIndustryCode": "10241747"
+  },
+  {
+    "industryName": "Textilmaskiner, konfektionsmaskiner",
+    "proffIndustryCode": "10008060"
+  },
+  {
+    "industryName": "Tidningar",
+    "proffIndustryCode": "10008074"
+  },
+  {
+    "industryName": "Tidregistreringssystem",
+    "proffIndustryCode": "10008101"
+  },
+  {
+    "industryName": "Toaletter",
+    "proffIndustryCode": "10008114"
+  },
+  {
+    "industryName": "Tobak",
+    "proffIndustryCode": "10008127"
+  },
+  {
+    "industryName": "Tobak - grossist",
+    "proffIndustryCode": "10241748"
+  },
+  {
+    "industryName": "Torghandel",
+    "proffIndustryCode": "10241749"
+  },
+  {
+    "industryName": "Torv, Jord",
+    "proffIndustryCode": "10008798"
+  },
+  {
+    "industryName": "Trafikskolor",
+    "proffIndustryCode": "10008179"
+  },
+  {
+    "industryName": "Transformatorer, växelriktare, kondensatorer",
+    "proffIndustryCode": "10008191"
+  },
+  {
+    "industryName": "Transmissioner",
+    "proffIndustryCode": "10008204"
+  },
+  {
+    "industryName": "Transportbilar",
+    "proffIndustryCode": "10007790"
+  },
+  {
+    "industryName": "Transportförmedling",
+    "proffIndustryCode": "10007803"
+  },
+  {
+    "industryName": "Trappor",
+    "proffIndustryCode": "10007816"
+  },
+  {
+    "industryName": "Trav- och galoppbanor",
+    "proffIndustryCode": "10242087"
+  },
+  {
+    "industryName": "Truckar",
+    "proffIndustryCode": "10007828"
+  },
+  {
+    "industryName": "Tryckerier",
+    "proffIndustryCode": "10007841"
+  },
+  {
+    "industryName": "Tryckluftsutrustningar",
+    "proffIndustryCode": "10007867"
+  },
+  {
+    "industryName": "Trä och byggvaror - grossist",
+    "proffIndustryCode": "10241750"
+  },
+  {
+    "industryName": "Träbearbetningsutrustningar",
+    "proffIndustryCode": "10007880"
+  },
+  {
+    "industryName": "Trädgårdsanläggningar",
+    "proffIndustryCode": "10007893"
+  },
+  {
+    "industryName": "Trädgårdsmaskiner, trädgårdsredskap",
+    "proffIndustryCode": "10007905"
+  },
+  {
+    "industryName": "Trädgårdsväxter, plantskolor",
+    "proffIndustryCode": "10007931"
+  },
+  {
+    "industryName": "Trävaror",
+    "proffIndustryCode": "10007944"
+  },
+  {
+    "industryName": "Trävaror - produktion",
+    "proffIndustryCode": "10241751"
+  },
+  {
+    "industryName": "Tull",
+    "proffIndustryCode": "10241752"
+  },
+  {
+    "industryName": "Tvätterier",
+    "proffIndustryCode": "10007982"
+  },
+  {
+    "industryName": "Tyger, sybehör",
+    "proffIndustryCode": "10008007"
+  },
+  {
+    "industryName": "Ugnar",
+    "proffIndustryCode": "10008021"
+  },
+  {
+    "industryName": "Undertak, undertaksarbeten",
+    "proffIndustryCode": "10008047"
+  },
+  {
+    "industryName": "Urmakare",
+    "proffIndustryCode": "10241753"
+  },
+  {
+    "industryName": "Utbildning",
+    "proffIndustryCode": "10008217"
+  },
+  {
+    "industryName": "Uthyrning",
+    "proffIndustryCode": "10008251"
+  },
+  {
+    "industryName": "Utomhusreklam",
+    "proffIndustryCode": "10008272"
+  },
+  {
+    "industryName": "VVS-arbeten, material och produkter",
+    "proffIndustryCode": "10008480"
+  },
+  {
+    "industryName": "Vapen",
+    "proffIndustryCode": "10008298"
+  },
+  {
+    "industryName": "Vapen - tillverkning",
+    "proffIndustryCode": "10241756"
+  },
+  {
+    "industryName": "Vattenbehandlingsutrustningar",
+    "proffIndustryCode": "10008324"
+  },
+  {
+    "industryName": "Ventilation, luftbehandling",
+    "proffIndustryCode": "10008337"
+  },
+  {
+    "industryName": "Ventiler, kopplingar",
+    "proffIndustryCode": "10008350"
+  },
+  {
+    "industryName": "Verkstadsinredningar",
+    "proffIndustryCode": "10008363"
+  },
+  {
+    "industryName": "Verktyg - Elverktyg",
+    "proffIndustryCode": "10008376"
+  },
+  {
+    "industryName": "Verktyg - Handverktyg",
+    "proffIndustryCode": "10008389"
+  },
+  {
+    "industryName": "Verktyg - Tryckluft",
+    "proffIndustryCode": "10008402"
+  },
+  {
+    "industryName": "Verktyg och redskap",
+    "proffIndustryCode": "10241757"
+  },
+  {
+    "industryName": "Verktyg och redskap - tillverkning",
+    "proffIndustryCode": "10241758"
+  },
+  {
+    "industryName": "Verktygsmaskiner, maskinverktyg",
+    "proffIndustryCode": "10008415"
+  },
+  {
+    "industryName": "Veterinärer",
+    "proffIndustryCode": "10241759"
+  },
+  {
+    "industryName": "Video, film - Inspelning, produktion",
+    "proffIndustryCode": "10008441"
+  },
+  {
+    "industryName": "Vinagenturer, spritagenturer",
+    "proffIndustryCode": "10008467"
+  },
+  {
+    "industryName": "Väganordningar, trafikanordningar, vägarbeten",
+    "proffIndustryCode": "10008506"
+  },
+  {
+    "industryName": "Väggar, väggsystem",
+    "proffIndustryCode": "10008519"
+  },
+  {
+    "industryName": "Värdepappershandel",
+    "proffIndustryCode": "10008544"
+  },
+  {
+    "industryName": "Värdepappershandel - Internetmäklare",
+    "proffIndustryCode": "10008532"
+  },
+  {
+    "industryName": "Värderingar",
+    "proffIndustryCode": "10008558"
+  },
+  {
+    "industryName": "Värmebehandling, härdning",
+    "proffIndustryCode": "10008571"
+  },
+  {
+    "industryName": "Värmepumpar, värmeväxlare",
+    "proffIndustryCode": "10008584"
+  },
+  {
+    "industryName": "Värmeutrustningar, torkutrustningar",
+    "proffIndustryCode": "10008597"
+  },
+  {
+    "industryName": "Växtservice, kontorsservice",
+    "proffIndustryCode": "10008623"
+  },
+  {
+    "industryName": "Vågar",
+    "proffIndustryCode": "10008493"
+  },
+  {
+    "industryName": "Ytbehandling",
+    "proffIndustryCode": "10008661"
+  },
+  {
+    "industryName": "Ytbehandlingsutrustningar, tillbehör",
+    "proffIndustryCode": "10008674"
+  },
+  {
+    "industryName": "Zoologiska tjänster",
+    "proffIndustryCode": "10241760"
+  },
+  {
+    "industryName": "Äventyrsupplevelser",
+    "proffIndustryCode": "10008729"
+  },
+  {
+    "industryName": "Åkerier",
+    "proffIndustryCode": "10008687"
+  },
+  {
+    "industryName": "Återvinning",
+    "proffIndustryCode": "10008716"
+  },
+  {
+    "industryName": "Översättningar",
+    "proffIndustryCode": "10008742"
+  },
+  {
+    "industryName": "Övrig tillverkning",
+    "proffIndustryCode": "10241761"
+  },
+  {
+    "industryName": "Övriga fordon",
+    "proffIndustryCode": "10241762"
+  }
+]
