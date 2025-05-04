@@ -1,18 +1,7 @@
 import * as cheerio from "cheerio";
 import { logger } from "../logger.js";
 import { fetchPage } from "../lib/scraping.js";
-
-export interface CompanyInfo {
-  name: string;
-  orgNumber: string;
-  location: string;
-  status: string;
-  revenue?: string;
-  employees?: string;
-  description?: string;
-  phone?: string;
-  industry?: string[];
-}
+import { CompanyInfo } from "../types/index.js";
 
 export async function getCompanyInfo(path: string): Promise<CompanyInfo> {
   try {

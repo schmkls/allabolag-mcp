@@ -1,15 +1,7 @@
 import * as cheerio from "cheerio";
 import { logger } from "../logger.js";
 import { fetchPage } from "../lib/scraping.js";
-
-export interface CompanySearchResult {
-  name: string;
-  orgNumber: string;
-  location: string;
-  link: string;
-  revenue?: string;
-  employees?: string;
-}
+import { CompanySearchResult } from "../types/index.js";
 
 export async function searchCompanies(
   query: string
