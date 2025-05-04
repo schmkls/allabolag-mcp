@@ -102,8 +102,32 @@ server.tool(
       .describe("Page number to fetch (1-indexed, defaults to 1)"),
   },
   async (params) => {
-    logger.log("Starting segmentation-search with params:", params);
+    logger.log("Segmentation search called with params:", params);
+
     try {
+      // Log the filters being applied
+      const filters = [];
+      if (params.location) filters.push(`Location: ${params.location}`);
+      if (
+        params.numEmployeesFrom !== undefined ||
+        params.numEmployeesTo !== undefined
+      ) {
+        const from = params.numEmployeesFrom ?? 0;
+        const to = params.numEmployeesTo ?? "∞";
+        filters.push(`Employees: ${from} - ${to}`);
+      }
+      if (params.revenueFrom !== undefined || params.revenueTo !== undefined) {
+        const from = params.revenueFrom ?? 0;
+        const to = params.revenueTo ?? "∞";
+        filters.push(`Revenue: ${from} - ${to} (thousand SEK)`);
+      }
+      if (params.companyType)
+        filters.push(`Company type: ${params.companyType}`);
+      if (params.proffIndustryCode)
+        filters.push(`Industry: ${params.proffIndustryCode}`);
+
+      logger.log(`Applying filters: ${filters.join(", ")}`);
+
       const { results, totalCount } = await segmentationSearch(params);
       logger.log(
         `Segmentation search results received: ${results.length} of total ${totalCount}`
@@ -121,63 +145,46 @@ server.tool(
         };
       }
 
-      // Check if the query is just about the count
-      const numEmployeesFilter =
-        params.numEmployeesFrom !== undefined ||
-        params.numEmployeesTo !== undefined;
-      const locationFilter = params.location !== undefined;
-
-      // If we're just checking for a count, return a simplified response
-      if (numEmployeesFilter || locationFilter) {
-        return {
-          content: [
-            {
-              type: "text",
-              text: `Found ${totalCount} companies matching your criteria.`,
-            },
-          ],
-        };
-      }
-
-      let response = `Found ${totalCount} companies. Showing page ${
+      // Always return the detailed information
+      let response = `Found ${totalCount} companies matching your criteria. Showing page ${
         params.page || 1
       } results:\n\n`;
-      const formattedResults = results
-        .map((company) => {
-          let result = `${company.name} (${company.orgNumber})\n`;
-          result += `Location: ${company.location}\n`;
 
-          if (company.revenue) {
-            result += `Revenue${
-              company.revenueYear ? " " + company.revenueYear : ""
-            }: ${company.revenue}\n`;
-          }
-
-          if (company.employees) {
-            result += `Employees: ${company.employees}\n`;
-          }
-
-          if (company.registrationDate) {
-            result += `Registration Date: ${company.registrationDate}\n`;
-          }
-
-          if (company.industry && company.industry.length > 0) {
-            result += `Industry: ${company.industry.join(", ")}\n`;
-          }
-
-          result += `Link: https://www.allabolag.se${company.link}\n`;
-          return result;
-        })
-        .join("\n");
+      // Format the results as a table
+      results.forEach((company, index) => {
+        response += `${index + 1}. ${company.name}\n`;
+        if (company.revenue && company.revenueYear) {
+          response += `   Revenue: ${company.revenue} thousand SEK (${company.revenueYear})\n`;
+        }
+        if (company.employees) {
+          response += `   Employees: ${company.employees}\n`;
+        }
+        if (company.location) {
+          response += `   Location: ${company.location}\n`;
+        }
+        if (company.orgNumber) {
+          response += `   Org number: ${company.orgNumber}\n`;
+        }
+        response += `\n`;
+      });
 
       return {
-        content: [{ type: "text", text: response + formattedResults }],
+        content: [
+          {
+            type: "text",
+            text: response,
+          },
+        ],
       };
-    } catch (error: any) {
-      logger.log("Error in segmentation-search:", error);
+    } catch (error) {
+      logger.log("Error in segmentation search:", error);
       return {
-        content: [{ type: "text", text: `Error: ${error.message}` }],
-        isError: true,
+        content: [
+          {
+            type: "text",
+            text: "Failed to perform company segmentation search. Please try again later.",
+          },
+        ],
       };
     }
   }
