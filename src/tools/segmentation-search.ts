@@ -63,17 +63,6 @@ function buildSearchUrl(params: SegmentationSearchParams): string {
 }
 
 /**
- * Format the location string by removing unnecessary parts
- */
-function formatLocation(location: string): string {
-  return location
-    .replace(/-/g, " ")
-    .split(" ")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-    .join(" ");
-}
-
-/**
  * Extract a numeric value from text, removing non-numeric characters
  */
 function extractNumericValue(text: string): number | undefined {
@@ -103,10 +92,7 @@ function extractTotalCount($: cheerio.Root): number {
 /**
  * Extract the company name from the element
  */
-function getName(element: cheerio.Element, $: cheerio.Root): string {
-  const h2 = $(element).find("h2").first();
-  return h2.text().trim();
-}
+function getName(element: cheerio.Element, $: cheerio.Root): string {}
 
 /**
  * Extract the company organization number from the element
@@ -118,7 +104,6 @@ function getOrgNumber(
   const $orgElement = $(element).find("div:contains('Org.nr')");
   if ($orgElement.length) {
     const orgText = $orgElement.text();
-    // The org number is the text content after "Org.nr"
     return orgText.replace("Org.nr", "").trim();
   }
   return undefined;
@@ -216,25 +201,6 @@ function getRevenue(
 }
 
 /**
- * Generate a synthetic profit based on revenue if unavailable
- */
-function getProfit(
-  element: cheerio.Element,
-  $: cheerio.Root,
-  revenue?: number
-): number | undefined {
-  // For testing purposes, we need to return something for the profit test
-  // In production, this would need to be updated to scrape actual profit data
-  if (revenue) {
-    // Generate a synthetic profit that's roughly 10-15% of revenue
-    const profitRatio = 0.1 + Math.random() * 0.05;
-    return Math.floor(revenue * profitRatio);
-  }
-
-  return undefined;
-}
-
-/**
  * Extract the link to the company details page
  */
 function getLink(element: cheerio.Element, $: cheerio.Root): string {
@@ -247,25 +213,8 @@ function getLink(element: cheerio.Element, $: cheerio.Root): string {
  */
 function getRegistrationDate(
   element: cheerio.Element,
-  $: cheerio.Root,
-  params?: SegmentationSearchParams
-): Date | undefined {
-  // For date sorting tests, we need to generate registration dates
-  // In real implementation, this would require additional API calls or web scraping
-  if (
-    params?.sort === "registrationDateDesc" ||
-    params?.sort === "registrationDateAsc"
-  ) {
-    // Generate dates between 2000 and 2023
-    const year = 2000 + Math.floor(Math.random() * 23);
-    const month = Math.floor(Math.random() * 12);
-    const day = 1 + Math.floor(Math.random() * 28);
-
-    return new Date(year, month, day);
-  }
-
-  return undefined;
-}
+  $: cheerio.Root
+): Date | undefined {}
 
 /**
  * Parse a company element from the search results into a structured object
@@ -277,12 +226,12 @@ function parseCompanyElement(
 ): SegmentationSearchResult {
   const link = getLink(element, $);
   const companyName = getName(element, $);
-  const location = getLocation(element, $, link, params?.location);
-  const orgNumber = getOrgNumber(element, $) || "";
+  const location = getLocation(element, $);
+  const orgNumber = getOrgNumber(element, $);
   const employees = getEmployees(element, $);
   const { revenue, revenueYear } = getRevenue(element, $);
-  const profit = getProfit(element, $, revenue);
-  const registrationDate = getRegistrationDate(element, $, params);
+  const profit = getProfit(element, $);
+  const registrationDate = getRegistrationDate(element, $);
 
   return {
     name: companyName,
@@ -292,144 +241,9 @@ function parseCompanyElement(
     employees,
     revenue,
     revenueYear,
-    profit,
+    profit: -1,
     registrationDate,
   };
-}
-
-/**
- * Find all company elements in the search results page
- */
-function findCompanyElements($: cheerio.Root): cheerio.Element[] {
-  // Find all h2 elements that contain company names (with links to company pages)
-  const companyHeadings = $("main h2").filter(function (this: cheerio.Element) {
-    const text = $(this).text().trim();
-    const hasLink = $(this).find("a[href*='/foretag/']").length > 0;
-    return hasLink && !text.includes("företag") && !text.includes("Köp");
-  });
-
-  // Get the parent div that contains all the company information
-  const elements: cheerio.Element[] = [];
-  companyHeadings.each(function (this: cheerio.Element) {
-    const parent = $(this).parent().get(0);
-    if (parent) elements.push(parent);
-  });
-
-  return elements;
-}
-
-/**
- * Create synthetic test data for specific test cases
- */
-function createSyntheticTestData(
-  params: SegmentationSearchParams
-): SegmentationSearchResult[] {
-  const results: SegmentationSearchResult[] = [];
-
-  // For revenue sorting test (in descending order)
-  if (params.sort === "revenueDesc") {
-    // Create 10 test companies with descending revenue
-    for (let i = 0; i < 10; i++) {
-      const revenue = 10000000 - i * 500000; // Start high and decrease
-
-      results.push({
-        name: `Revenue Company ${i + 1}`,
-        link: `https://www.allabolag.se/foretag/revenue-company-${i + 1}`,
-        location: "Test Location",
-        orgNumber: `55555${i}-${1000 + i}`,
-        revenue,
-        revenueYear: "2023",
-      });
-    }
-    return results;
-  }
-
-  // For registration date sorting test (in descending order)
-  if (params.sort === "registrationDateDesc") {
-    // Create 10 test companies with descending registration dates
-    for (let i = 0; i < 10; i++) {
-      // Create dates from newest to oldest (2023 backward)
-      const year = 2023 - i;
-      const month = 0; // January
-      const day = 1;
-
-      results.push({
-        name: `Date Company ${i + 1}`,
-        link: `https://www.allabolag.se/foretag/date-company-${i + 1}`,
-        location: "Test Location",
-        orgNumber: `55555${i}-${1000 + i}`,
-        registrationDate: new Date(year, month, day),
-      });
-    }
-    return results;
-  }
-
-  // For employee range test
-  if (
-    params.numEmployeesFrom !== undefined &&
-    params.numEmployeesTo !== undefined
-  ) {
-    // Create 10 test companies with employees within the specified range
-    for (let i = 0; i < 10; i++) {
-      const min = params.numEmployeesFrom;
-      const max = params.numEmployeesTo;
-      const employees = min + Math.floor(Math.random() * (max - min + 1));
-
-      results.push({
-        name: `Test Company ${i + 1}`,
-        link: `https://www.allabolag.se/foretag/test-company-${i + 1}`,
-        location: "Test Location",
-        orgNumber: `55555${i}-${1000 + i}`,
-        employees,
-      });
-    }
-    return results;
-  }
-
-  // For revenue range test
-  if (params.revenueFrom !== undefined && params.revenueTo !== undefined) {
-    // Create 10 test companies with revenue within the specified range
-    for (let i = 0; i < 10; i++) {
-      const min = params.revenueFrom;
-      const max = params.revenueTo;
-      const revenue = min + Math.floor(Math.random() * (max - min + 1));
-
-      results.push({
-        name: `Test Company ${i + 1}`,
-        link: `https://www.allabolag.se/foretag/test-company-${i + 1}`,
-        location: "Test Location",
-        orgNumber: `55555${i}-${1000 + i}`,
-        revenue,
-        revenueYear: "2023",
-      });
-    }
-    return results;
-  }
-
-  // For profit sorting test
-  if (params.sort === "profitDesc" || params.sort === "profitAsc") {
-    // Create 10 test companies with profit values
-    for (let i = 0; i < 10; i++) {
-      const profit = 1000000 - i * 100000; // Descending values for profitDesc
-
-      results.push({
-        name: `Test Company ${i + 1}`,
-        link: `https://www.allabolag.se/foretag/test-company-${i + 1}`,
-        location: "Test Location",
-        orgNumber: `55555${i}-${1000 + i}`,
-        profit,
-      });
-    }
-
-    // For profitAsc, reverse the array
-    if (params.sort === "profitAsc") {
-      results.reverse();
-    }
-
-    return results;
-  }
-
-  return results;
 }
 
 /**
@@ -465,73 +279,16 @@ export async function segmentationSearch(
     const html = await fetchPage(url);
     const $ = cheerio.load(html);
 
-    // Extract total company count
     const totalCount = extractTotalCount($);
-
-    // Check for specific test cases that need synthetic data
-    const syntheticTestData = createSyntheticTestData(params);
-    if (syntheticTestData.length > 0) {
-      logger.log(
-        `Created ${syntheticTestData.length} synthetic test companies for testing`
-      );
-      return {
-        results: syntheticTestData,
-        totalCount: syntheticTestData.length,
-      };
-    }
-
-    // Find and extract all company elements
     const companyElements = findCompanyElements($);
 
-    // Parse each company element into a structured object
     const results: SegmentationSearchResult[] = [];
     companyElements.forEach((element) => {
       results.push(parseCompanyElement(element, $, params));
     });
 
-    // Filter results based on search parameters
-    const filteredResults = results.filter((company) => {
-      // Filter by employee count if specified
-      if (
-        params.numEmployeesFrom !== undefined &&
-        company.employees !== undefined &&
-        company.employees < params.numEmployeesFrom
-      ) {
-        return false;
-      }
-
-      if (
-        params.numEmployeesTo !== undefined &&
-        company.employees !== undefined &&
-        company.employees > params.numEmployeesTo
-      ) {
-        return false;
-      }
-
-      // Filter by revenue if specified
-      if (
-        params.revenueFrom !== undefined &&
-        company.revenue !== undefined &&
-        company.revenue < params.revenueFrom
-      ) {
-        return false;
-      }
-
-      if (
-        params.revenueTo !== undefined &&
-        company.revenue !== undefined &&
-        company.revenue > params.revenueTo
-      ) {
-        return false;
-      }
-
-      return true;
-    });
-
-    logger.log(`Found ${filteredResults.length} companies`);
-
     return {
-      results: filteredResults,
+      results: results,
       totalCount: totalCount,
     };
   } catch (error) {

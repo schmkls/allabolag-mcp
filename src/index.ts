@@ -59,7 +59,17 @@ server.tool(
 
 server.tool(
   "segmentation-search",
-  "Search companies by industry, location, revenue, employees, and more",
+  "Search companies by industry, location, revenue, employees, and more" +
+    "\n\n" +
+    "revenueFrom and revenueTo must be used in combination with each other" +
+    "\n" +
+    "revenueFrom Min=-221349, Max=300276000" +
+    "\n" +
+    "numEmployeesFrom Min=0, Max=100000" +
+    "\n" +
+    "numEmployeesFrom and numEmployeesTo must be used in combination with each other" +
+    "\n" +
+    "numEmployeesFrom Min=0, Max=100000",
   {
     proffIndustryCode: z.string().optional().describe("Industry code"),
     location: z.string().optional().describe("Company location"),
@@ -67,19 +77,27 @@ server.tool(
     revenueFrom: z
       .number()
       .optional()
-      .describe("Minimum revenue in thousand SEK"),
+      .describe(
+        "Minimum revenue in thousand SEK. Must be used in combination with revenueTo. Min=-221349"
+      ),
     revenueTo: z
       .number()
       .optional()
-      .describe("Maximum revenue in thousand SEK"),
+      .describe(
+        "Maximum revenue in thousand SEK. Must be used in combination with revenueFrom. Max=300276000"
+      ),
     numEmployeesFrom: z
       .number()
       .optional()
-      .describe("Minimum number of employees"),
+      .describe(
+        "Minimum number of employees. Must be used in combination with numEmployeesTo"
+      ),
     numEmployeesTo: z
       .number()
       .optional()
-      .describe("Maximum number of employees"),
+      .describe(
+        "Maximum number of employees. Must be used in combination with numEmployeesFrom. Max=100000"
+      ),
     sort: z
       .enum([
         "companyNameDesc",
