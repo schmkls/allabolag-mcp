@@ -100,15 +100,21 @@ function getName(element: cheerio.Element, $: cheerio.Root): string {
 /**
  * Extract the company organization number from company element
  */
-function getOrgNumber(
-  element: cheerio.Element,
-  $: cheerio.Root
-): string | undefined {
-  const $orgElement = $(element).find("div:contains('Org.nr')");
-  if ($orgElement.length) {
-    const orgText = $orgElement.text();
-    return orgText.replace("Org.nr", "").trim();
+function getOrgNumber(element: cheerio.Element, $: cheerio.Root): string {
+  // Look for spans containing "Org.nr"
+  const orgElement = $(element).find("span:contains('Org.nr')");
+
+  if (orgElement.length) {
+    // Get the full text which includes both "Org.nr" and the actual number
+    const fullText = orgElement.text().trim();
+
+    // Match just the numeric part with dashes (like 559092-9195)
+    const match = fullText.match(/(\d+[-]\d+)/);
+    if (match && match[1]) {
+      return match[1];
+    }
   }
+
   return "N/A";
 }
 
@@ -203,6 +209,7 @@ function parseCompanyElement(
   const companyName = getName(element, $);
   const location = getLocation(element, $);
   const orgNumber = getOrgNumber(element, $);
+  console.log("orgNumber: ", orgNumber);
   const employees = getEmployees(element, $);
   const { revenue, revenueYear } = getRevenue(element, $);
   const profit = getProfit(element, $);
