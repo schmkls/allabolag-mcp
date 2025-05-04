@@ -30,5 +30,3 @@ export async function fetchPage(url: string): Promise<string> {
     );
   }
 }
-
-// TODO: Move general reusable scraping logic here

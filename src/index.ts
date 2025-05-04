@@ -4,6 +4,7 @@ import { z } from "zod";
 import { logger } from "./logger.js";
 import { searchCompanies } from "./tools/search-companies.js";
 import { getCompanyInfo } from "./tools/get-company-info.js";
+import { segmentationSearch } from "./tools/segmentation-search.js";
 
 const server = new McpServer({
   name: "allabolag",
@@ -48,6 +49,107 @@ server.tool(
       };
     } catch (error: any) {
       logger.log("Error in search-companies:", error);
+      return {
+        content: [{ type: "text", text: `Error: ${error.message}` }],
+        isError: true,
+      };
+    }
+  }
+);
+
+server.tool(
+  "segmentation-search",
+  "Search companies by industry, location, revenue, employees, and more",
+  {
+    proffIndustryCode: z.string().optional().describe("Industry code"),
+    location: z.string().optional().describe("Company location"),
+    companyType: z.string().optional().describe("Type of company (e.g., 'AB')"),
+    revenueFrom: z
+      .number()
+      .optional()
+      .describe("Minimum revenue in thousand SEK"),
+    revenueTo: z
+      .number()
+      .optional()
+      .describe("Maximum revenue in thousand SEK"),
+    numEmployeesFrom: z
+      .number()
+      .optional()
+      .describe("Minimum number of employees"),
+    numEmployeesTo: z
+      .number()
+      .optional()
+      .describe("Maximum number of employees"),
+    page: z.number().optional().describe("Page number for pagination"),
+    sort: z
+      .enum([
+        "companyNameDesc",
+        "companyNameAsc",
+        "registrationDateDesc",
+        "registrationDateAsc",
+        "numEmployeesAsc",
+        "numEmployeesDesc",
+        "relevance",
+        "revenueAsc",
+        "revenueDesc",
+        "profitAsc",
+        "profitDesc",
+      ])
+      .optional()
+      .describe("Sort order for results"),
+  },
+  async (params) => {
+    logger.log("Starting segmentation-search with params:", params);
+    try {
+      const results = await segmentationSearch(params);
+      logger.log("Segmentation search results received:", results);
+
+      if (results.length === 0) {
+        logger.log("No results found");
+        return {
+          content: [
+            {
+              type: "text",
+              text: "No companies found matching your search criteria.",
+            },
+          ],
+        };
+      }
+
+      logger.log(`Found ${results.length} companies`);
+      const formattedResults = results
+        .map((company) => {
+          let result = `${company.name} (${company.orgNumber})\n`;
+          result += `Location: ${company.location}\n`;
+
+          if (company.revenue) {
+            result += `Revenue${
+              company.revenueYear ? " " + company.revenueYear : ""
+            }: ${company.revenue}\n`;
+          }
+
+          if (company.employees) {
+            result += `Employees: ${company.employees}\n`;
+          }
+
+          if (company.registrationDate) {
+            result += `Registration Date: ${company.registrationDate}\n`;
+          }
+
+          if (company.industry && company.industry.length > 0) {
+            result += `Industry: ${company.industry.join(", ")}\n`;
+          }
+
+          result += `Link: https://www.allabolag.se${company.link}\n`;
+          return result;
+        })
+        .join("\n");
+
+      return {
+        content: [{ type: "text", text: formattedResults }],
+      };
+    } catch (error: any) {
+      logger.log("Error in segmentation-search:", error);
       return {
         content: [{ type: "text", text: `Error: ${error.message}` }],
         isError: true,
