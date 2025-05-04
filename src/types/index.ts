@@ -15,6 +15,7 @@ export interface SegmentationSearchParams {
   revenueTo?: number;
   numEmployeesFrom?: number;
   numEmployeesTo?: number;
+  page?: number;
   sort?:
     | "companyNameDesc"
     | "companyNameAsc"

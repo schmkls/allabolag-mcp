@@ -48,12 +48,13 @@ describe("segmentationSearch", () => {
       location: "Umeå",
       numEmployeesFrom: 0,
       numEmployeesTo: 10,
+      page: 2,
     };
 
     try {
       // Fetch page 2 specifically
       console.log("Calling segmentationSearch with specific page 2");
-      const result = await segmentationSearch(params, 2);
+      const result = await segmentationSearch(params);
 
       console.log("Test received result for page 2:", {
         totalCount: result.totalCount,

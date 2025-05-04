@@ -104,11 +104,7 @@ server.tool(
   async (params) => {
     logger.log("Starting segmentation-search with params:", params);
     try {
-      const { page, ...searchParams } = params;
-      const { results, totalCount } = await segmentationSearch(
-        searchParams,
-        page
-      );
+      const { results, totalCount } = await segmentationSearch(params);
       logger.log(
         `Segmentation search results received: ${results.length} of total ${totalCount}`
       );
@@ -144,7 +140,7 @@ server.tool(
       }
 
       let response = `Found ${totalCount} companies. Showing page ${
-        page || 1
+        params.page || 1
       } results:\n\n`;
       const formattedResults = results
         .map((company) => {

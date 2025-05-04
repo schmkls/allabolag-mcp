@@ -10,12 +10,10 @@ import {
  * Search for companies on Allabolag.se using segmentation criteria
  *
  * @param params - The search parameters for segmentation (location, employees, revenue, etc.)
- * @param page - The specific page to fetch (1-indexed, defaults to 1)
  * @returns An object containing the results array and the total count of companies
  */
 export async function segmentationSearch(
-  params: SegmentationSearchParams,
-  page: number = 1
+  params: SegmentationSearchParams
 ): Promise<{ results: SegmentationSearchResult[]; totalCount: number }> {
   try {
     // Build the URL with query parameters
@@ -46,7 +44,8 @@ export async function segmentationSearch(
       queryParams.set("sort", params.sort);
     }
 
-    // Set the requested page
+    // Set the requested page (default to 1 if not provided)
+    const page = params.page || 1;
     queryParams.set("page", page.toString());
 
     const url = `https://www.allabolag.se/segmentering?${queryParams.toString()}`;
