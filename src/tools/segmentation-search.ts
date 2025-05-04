@@ -90,12 +90,14 @@ function extractTotalCount($: cheerio.Root): number {
 }
 
 /**
- * Extract the company name from the element
+ * Extract the company name from company element
  */
-function getName(element: cheerio.Element, $: cheerio.Root): string {}
+function getName(element: cheerio.Element, $: cheerio.Root): string {
+  return "TODO get name";
+}
 
 /**
- * Extract the company organization number from the element
+ * Extract the company organization number from company element
  */
 function getOrgNumber(
   element: cheerio.Element,
@@ -106,46 +108,14 @@ function getOrgNumber(
     const orgText = $orgElement.text();
     return orgText.replace("Org.nr", "").trim();
   }
-  return undefined;
+  return "N/A";
 }
 
 /**
- * Extract location from company element or URL
+ * Extract location from company element
  */
-function getLocation(
-  element: cheerio.Element,
-  $: cheerio.Root,
-  link: string,
-  requestedLocation?: string
-): string {
-  // If we have a requested location in the search params, prioritize it
-  if (requestedLocation) {
-    return requestedLocation;
-  }
-
-  // First try to extract from URL
-  if (link) {
-    const locationMatch = link.match(/\/foretag\/.*\/(.*?)\//);
-    if (locationMatch && locationMatch[1]) {
-      return formatLocation(decodeURIComponent(locationMatch[1]));
-    }
-  }
-
-  // Try postal address div
-  const locationDiv = $(element)
-    .children("div")
-    .filter(function (this: cheerio.Element) {
-      const text = $(this).text().trim();
-      return text.match(/^\d{3}\s?\d{2}\s?[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/) !== null;
-    });
-
-  if (locationDiv.length) {
-    const fullText = locationDiv.text().trim();
-    const locationPart = fullText.replace(/^\d{3}\s?\d{2}\s?/, "").trim();
-    return locationPart;
-  }
-
-  return "";
+function getLocation(element: cheerio.Element, $: cheerio.Root): string {
+  return "TODO get location";
 }
 
 /**
@@ -201,20 +171,16 @@ function getRevenue(
 }
 
 /**
- * Extract the link to the company details page
+ * Extract the link to the company details page from company element
  */
 function getLink(element: cheerio.Element, $: cheerio.Root): string {
   const linkElement = $(element).find("h2 a").first();
   return linkElement.attr("href") || "";
 }
 
-/**
- * Generate a synthetic registration date if actual data is not available
- */
-function getRegistrationDate(
-  element: cheerio.Element,
-  $: cheerio.Root
-): Date | undefined {}
+function getProfit(element: cheerio.Element, $: cheerio.Root): number {
+  return "TODO get profit";
+}
 
 /**
  * Parse a company element from the search results into a structured object
@@ -222,7 +188,7 @@ function getRegistrationDate(
 function parseCompanyElement(
   element: cheerio.Element,
   $: cheerio.Root,
-  params?: SegmentationSearchParams
+  params: SegmentationSearchParams
 ): SegmentationSearchResult {
   const link = getLink(element, $);
   const companyName = getName(element, $);
@@ -231,19 +197,26 @@ function parseCompanyElement(
   const employees = getEmployees(element, $);
   const { revenue, revenueYear } = getRevenue(element, $);
   const profit = getProfit(element, $);
-  const registrationDate = getRegistrationDate(element, $);
 
   return {
     name: companyName,
     link: `https://www.allabolag.se${link}`,
     location,
-    orgNumber,
+    orgNumber: orgNumber || "N/A",
     employees,
     revenue,
     revenueYear,
-    profit: -1,
-    registrationDate,
+    profit,
+    registrationDate: "",
   };
+}
+
+export function findCompanyElements($: cheerio.Root): cheerio.Element[] {
+  // Find all divs with class containing "SegmentationSearchResultCard"
+  const companyElements = $(
+    'div[class*="SegmentationSearchResultCard"]'
+  ).toArray();
+  return companyElements;
 }
 
 /**
