@@ -93,7 +93,8 @@ function extractTotalCount($: cheerio.Root): number {
  * Extract the company name from company element
  */
 function getName(element: cheerio.Element, $: cheerio.Root): string {
-  return "TODO get name";
+  const nameElement = $(element).find("h2 a").first();
+  return nameElement.text().trim();
 }
 
 /**
@@ -254,6 +255,7 @@ export async function segmentationSearch(
 
     const totalCount = extractTotalCount($);
     const companyElements = findCompanyElements($);
+    console.log("company elements: ", companyElements);
 
     const results: SegmentationSearchResult[] = [];
     companyElements.forEach((element) => {
