@@ -116,7 +116,15 @@ function getOrgNumber(
  * Extract location from company element
  */
 function getLocation(element: cheerio.Element, $: cheerio.Root): string {
-  return "TODO get location";
+  // Location is in the span with the location-dot icon
+  const locationElement = $(element).find("svg.fa-location-dot").parent();
+  if (locationElement.length) {
+    // Get the text content and remove any SVG text
+    const fullText = locationElement.text().trim();
+    // The location is the text after the SVG element
+    return fullText;
+  }
+  return "";
 }
 
 /**
@@ -255,7 +263,6 @@ export async function segmentationSearch(
 
     const totalCount = extractTotalCount($);
     const companyElements = findCompanyElements($);
-    console.log("company elements: ", companyElements);
 
     const results: SegmentationSearchResult[] = [];
     companyElements.forEach((element) => {
