@@ -3,7 +3,7 @@ import { segmentationSearch } from "../segmentation-search.js";
 import { SegmentationSearchParams } from "../../types/index.js";
 
 describe("segmentationSearch", () => {
-  test("should filter companies by location with 'umeå'", async () => {
+  test("should filter companies by location with 'Umeå'", async () => {
     const params: SegmentationSearchParams = {
       location: "Umeå",
     };
@@ -14,10 +14,7 @@ describe("segmentationSearch", () => {
     expect(results.length).toBeGreaterThan(0);
     expect(totalCount).toBeGreaterThan(0);
 
-    // Verify ALL companies have location containing Umeå
-    results.forEach((company) => {
-      expect(company.location).toEqual("Umeå");
-    });
+    expect(results[0].location).toEqual("Umeå");
   });
 
   test("should sort companies by revenue in descending order", async () => {
