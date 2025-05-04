@@ -15,7 +15,6 @@ export interface SegmentationSearchParams {
   revenueTo?: number;
   numEmployeesFrom?: number;
   numEmployeesTo?: number;
-  page?: number;
   sort?:
     | "companyNameDesc"
     | "companyNameAsc"
@@ -42,6 +41,11 @@ export interface SegmentationSearchResult {
   profitYear?: string;
   industry?: string[];
   registrationDate?: string;
+}
+
+export interface SegmentationSearchResponse {
+  results: SegmentationSearchResult[];
+  totalCount: number;
 }
 
 export interface CompanyInfo {

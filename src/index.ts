@@ -80,7 +80,6 @@ server.tool(
       .number()
       .optional()
       .describe("Maximum number of employees"),
-    page: z.number().optional().describe("Page number for pagination"),
     sort: z
       .enum([
         "companyNameDesc",
@@ -97,12 +96,22 @@ server.tool(
       ])
       .optional()
       .describe("Sort order for results"),
+    page: z
+      .number()
+      .optional()
+      .describe("Page number to fetch (1-indexed, defaults to 1)"),
   },
   async (params) => {
     logger.log("Starting segmentation-search with params:", params);
     try {
-      const results = await segmentationSearch(params);
-      logger.log("Segmentation search results received:", results);
+      const { page, ...searchParams } = params;
+      const { results, totalCount } = await segmentationSearch(
+        searchParams,
+        page
+      );
+      logger.log(
+        `Segmentation search results received: ${results.length} of total ${totalCount}`
+      );
 
       if (results.length === 0) {
         logger.log("No results found");
@@ -116,7 +125,27 @@ server.tool(
         };
       }
 
-      logger.log(`Found ${results.length} companies`);
+      // Check if the query is just about the count
+      const numEmployeesFilter =
+        params.numEmployeesFrom !== undefined ||
+        params.numEmployeesTo !== undefined;
+      const locationFilter = params.location !== undefined;
+
+      // If we're just checking for a count, return a simplified response
+      if (numEmployeesFilter || locationFilter) {
+        return {
+          content: [
+            {
+              type: "text",
+              text: `Found ${totalCount} companies matching your criteria.`,
+            },
+          ],
+        };
+      }
+
+      let response = `Found ${totalCount} companies. Showing page ${
+        page || 1
+      } results:\n\n`;
       const formattedResults = results
         .map((company) => {
           let result = `${company.name} (${company.orgNumber})\n`;
@@ -146,7 +175,7 @@ server.tool(
         .join("\n");
 
       return {
-        content: [{ type: "text", text: formattedResults }],
+        content: [{ type: "text", text: response + formattedResults }],
       };
     } catch (error: any) {
       logger.log("Error in segmentation-search:", error);
