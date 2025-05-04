@@ -37,11 +37,11 @@ export interface SegmentationSearchResult {
   link: string;
   revenue?: number;
   revenueYear?: string;
-  employees?: number;
+  employees?: string;
   profit?: number;
   profitYear?: string;
   industry?: string[];
-  registrationDate?: Date;
+  registrationDate?: string;
 }
 
 export interface SegmentationSearchResponse {

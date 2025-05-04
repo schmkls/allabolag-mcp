@@ -136,20 +136,25 @@ function getLocation(element: cheerio.Element, $: cheerio.Root): string {
 /**
  * Extract employee count from company element
  */
-function getEmployees(
-  element: cheerio.Element,
-  $: cheerio.Root
-): number | undefined {
-  const $employeesElement = $(element).find("div:contains('Anställda')");
-  if (!$employeesElement.length) return undefined;
+function getEmployees(element: cheerio.Element, $: cheerio.Root): string {
+  // Find any div that contains exactly "Anställda" text
+  const $employeesHeader = $(element)
+    .find("div:contains('Anställda')")
+    .filter(function (this: cheerio.Element) {
+      return $(this).text().trim() === "Anställda";
+    });
 
-  // Employee count is in the text content next to "Anställda"
-  const employeeText = $employeesElement
-    .parent()
-    .text()
-    .replace("Anställda", "")
-    .trim();
-  return extractNumericValue(employeeText);
+  if (!$employeesHeader.length) return "";
+
+  // Get the parent element that contains both the header and the value
+  const $parent = $employeesHeader.parent();
+  if (!$parent.length) return "";
+
+  // Get all text and remove the header text
+  const allText = $parent.text().trim();
+  const headerText = "Anställda";
+
+  return allText.replace(headerText, "").trim();
 }
 
 /**
@@ -193,8 +198,12 @@ function getLink(element: cheerio.Element, $: cheerio.Root): string {
   return linkElement.attr("href") || "";
 }
 
-function getProfit(element: cheerio.Element, $: cheerio.Root): number {
-  return "TODO get profit";
+function getProfit(
+  element: cheerio.Element,
+  $: cheerio.Root
+): number | undefined {
+  // TODO: Implement proper profit extraction
+  return undefined;
 }
 
 /**
@@ -209,8 +218,8 @@ function parseCompanyElement(
   const companyName = getName(element, $);
   const location = getLocation(element, $);
   const orgNumber = getOrgNumber(element, $);
-  console.log("orgNumber: ", orgNumber);
   const employees = getEmployees(element, $);
+  console.log("employees: ", employees);
   const { revenue, revenueYear } = getRevenue(element, $);
   const profit = getProfit(element, $);
 
@@ -223,7 +232,7 @@ function parseCompanyElement(
     revenue,
     revenueYear,
     profit,
-    registrationDate: "",
+    registrationDate: undefined,
   };
 }
 
